@@ -10,9 +10,9 @@ The Audio-Video Chat Plugin for WordPress is designed to increase members engage
 
 == Description ==
 
-The <a href=”http://avchat.net/integrations/wordpress” title='AVChat plugin for Wordpress'>Audio-Video Chat Plugin for WordPress</a> handles the integration between AVChat and your WordPress web site.
+The <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for Wordpress'>Audio-Video Chat Plugin for WordPress</a> handles the integration between AVChat and your WordPress web site.
 
-<a href=”http://avchat.net/features” title='AVChat software'>AVChat</a> is a group video chat script that can be hosted by you and installed on your web site. You can purchase the software from <a href=”http://avchat.net/buy-now” title='Buy AVChat'>here</a>: 
+<a href='http://avchat.net/features' title='AVChat software'>AVChat</a> is a group video chat script that can be hosted by you and installed on your web site. You can purchase the software from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>: 
 
 If you have purchased AVChat and your website is based on WordPress this Plugin will take care of:
 
