@@ -1,12 +1,12 @@
-=== AVChat Video Chat  Plugin for WordPress ===
-Tags: chat, video chat, flash, flash video chat, flash chat, videochat, streaming, red5, fms, wowza, avchat
+=== Video Chat  Plugin for WordPress ===
+Tags: chat, video chat, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat
 Requires at least: 3.0.0
 Tested up to: 3.3.2
 Stable tag: 1.0
 Contributors: stefan.avchat
 License: GPLv2 or later
 
-The Audio-Video Chat Plugin for WordPress is designed to increase members engagement and web site revenues with a stunning Video-Chat solution.
+The Audio-Video Chat Plugin for WordPress is designed to increase members engagement and web site revenues with a stunning video chat solution.
 
 == Description ==
 
