@@ -1,7 +1,7 @@
-=== Video Chat  Plugin for WordPress ===
+=== Video Chat  Plugin ===
 Tags: chat, video chat, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat
 Requires at least: 3.0.0
-Tested up to: 3.3.2
+Tested up to: 3.4
 Stable tag: 1.0
 Contributors: stefan.avchat
 License: GPLv2 or later
@@ -27,8 +27,8 @@ If you have purchased AVChat and your website is based on WordPress this Plugin 
 The AVChat3 Flash Video Chat plugin for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
 == Installation ==
-For this plugin to work, you first need to buy/download the latest version of Audio-Video Chat software from <a href='http://avchat.net/buy-now' title=”Buy AVChat”>here</a>
-After that, follow these steps:
+***For this plugin to work, you first need to buyor get a trial of the AVChat Video Chat software from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>. This plugin takes care of the integration with Wordpress of the AVChat, but does not contain the actual video chat software.
+After you obtain the AVChat archive from our site, follow these steps:
 
 1. Connect to your web site hosting account using FTP
 2. Upload the avchat3 folder (from avchat-3.zip) to your ***/wp-content/plugins*** folder
