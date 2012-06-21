@@ -27,7 +27,7 @@ If you have purchased AVChat and your website is based on WordPress this Plugin 
 The AVChat3 Flash Video Chat plugin for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
 == Installation ==
-***For this plugin to work, you first need to buyor get a trial of the AVChat Video Chat software from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>. This plugin takes care of the integration with Wordpress of the AVChat, but does not contain the actual video chat software.
+For this plugin to work, ***you first need to buy or get a trial of the AVChat Video Chat software*** from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>. This plugin takes care of the integration with Wordpress of the AVChat software, but does not contain the actual video chat.
 After you obtain the AVChat archive from our site, follow these steps:
 
 1. Connect to your web site hosting account using FTP
