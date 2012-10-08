@@ -16,33 +16,6 @@ $allowVisitors = 0;
 
 
 
-//-----------------------------------------
-//Config general settings
-//-----------------------------------------
-$avconfig['inviteLink']= $_SESSION['invite_link'];
-
-if($_SESSION['disconnect_link'] != ""){
-	$avconfig['disconnectButtonLink'] = $_SESSION['disconnect_link'];
-}
-
-if($_SESSION['login_page_url'] != ""){
-	$avconfig['loginPageURL']= $_SESSION['login_page_url'];
-}
-
-if($_SESSION['register_page_url'] != ""){
-	$avconfig['registerPageURL']= $_SESSION['register_page_url'];
-}
-
-$avconfig['textChatCharLimit']= $_SESSION['text_char_limit'];
-$avconfig['backgroundImageUrl']= $_SESSION['background_image'];
-
-if($_SESSION['history_lenght'] != ""){
-	$avconfig['historyLength']= $_SESSION['history_lenght'];
-}
-
-$avconfig['connectionstring']= $_SESSION['connection_string'];
-
-
 if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//-----------------------------------------
 	//Config username
@@ -78,94 +51,9 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 		}	
 	}
 	if($role != "administrator"){		
-		//----------------------------------------------------
-		//Config settings & permission for non administrators
-		//----------------------------------------------------
-		if($_SESSION['can_access_chat'] != '1'){
-			$avconfig['showLoginError'] = 1;
-		}else{		
-			//-----------------------------------------
-			//Config send audio/video permission
-			//-----------------------------------------
-			if($_SESSION['can_publish_audio_video']){
-				$avconfig['allowVideoStreaming']=1;
-				$avconfig['allowAideoStreaming']=1;
-				
-				//-----------------------------------------
-				//Config private stream permission
-				//-----------------------------------------
-				if($_SESSION['can_stream_private']){
-					$avconfig['allowPrivateStreaming']=1;
-				}else{
-					$avconfig['allowPrivateStreaming']=0;
-				}
-			}else{
-				$avconfig['allowVideoStreaming']=0;
-				$avconfig['allowAideoStreaming']=0;
-			}
+		
 			
-			//-----------------------------------------
-			//Config send file to room/user permissions
-			//-----------------------------------------
-			if($_SESSION['can_send_files_to_rooms']){
-				$avconfig['sendFileToRoomsEnabled']=1;
-			}else{
-				$avconfig['sendFileToRoomsEnabled']=0;
-			}
-			
-			if($_SESSION['can_send_files_to_users']){
-				$avconfig['sendFileToUserEnabled']=1;
-			}else{
-				$avconfig['sendFileToUserEnabled']=0;
-			}
-			
-			//-----------------------------------------
-			//Config send private message permission
-			//-----------------------------------------
-			if($_SESSION['can_pm']){
-				$avconfig['pmEnabled']=1;
-			}else{
-				$avconfig['pmEnabled']=0;
-			}
-			
-			//-----------------------------------------
-			//Config room creation permission
-			//-----------------------------------------
-			if($_SESSION['can_create_rooms']){
-				$avconfig['createRoomsEnabled']=1;
-			}else{
-				$avconfig['createRoomsEnabled']=0;
-			}
-			
-			//-----------------------------------------
-			//Config free video time
-			//-----------------------------------------
-			if($_SESSION['free_video_time'] != ""){
-				$avconfig['freeVideoTime']=$_SESSION['free_video_time'];
-			}
-			
-			//-----------------------------------------
-			//Config drop in room
-			//-----------------------------------------
-			if($_SESSION['drop_in_room'] != ""){
-				$avconfig['dropInRoom']=$_SESSION['drop_in_room'];
-			}
-			
-			//-----------------------------------------
-			//Config max streams a user can watch
-			//-----------------------------------------
-			if($_SESSION['max_streams'] != ""){
-				$avconfig['maxStreams']=$_SESSION['max_streams'];
-			}
-			
-			//-----------------------------------------
-			//Config max rooms one can be in
-			//-----------------------------------------
-			if($_SESSION['max_rooms'] != ""){
-				$avconfig["maxRoomsOneCanBeIn"]=$_SESSION['max_rooms'];
-			}
-			
-		}
+	}
 	}else{
 		//------------------------------------------
 		//Give maximum permissions to administrators
@@ -181,7 +69,7 @@ if($allowVisitors){
 	//--------------------------------------------------------------------
 	//Allow chat access to unregistered users but with predefined username
 	//--------------------------------------------------------------------	
-	$avconfig['username'] = 'user_'.rand(0,999);
+	$avconfig['username'] = 'AVChat_user_'.rand(0,999);
 	$avconfig['changeuser'] = 0;
 }else{
 	//------------------------------------------

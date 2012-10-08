@@ -14,15 +14,17 @@ The <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for 
 
 <a href='http://avchat.net/features' title='AVChat software'>AVChat</a> is a group video chat script that can be hosted by you and installed on your web site. You can purchase the software from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>: 
 
-If you have purchased AVChat and your website is based on WordPress this Plugin will take care of:
+If you have purchased AVChat and your website is based on WordPress this plugin will take care of:
 
 * username integration (users logged in the Word Press web site will not have to login again in the video chat )
 * compatible with buddypress: buddypress avatars are automatically added to users profiles and users profiles can be accessed directly from AVChat
-* setting up different permissions/limits/features for each user role in your WorPress web site
+* setting up different permissions/limits/features for each user role in your WorPress web site (in the PRO verision)
 * compatible with SEO friendly URL's in WordPress
-* you can choose the video chat location: embedded or popup
-* having access to the most important settings directly from the WrodPress admin area
+* you can choose the video chat location: embedded or popup (PRO version)
+* having access to the most important settings directly from the WrodPress admin area (PRO version)
 
+The PRO version can be bought from <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for Wordpress'>our website</a> and costs 49$.
+With the PRO version you also get 1 year of full support and updates , and free installation. 
 
 The AVChat3 Flash Video Chat plugin for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
@@ -36,9 +38,10 @@ After you obtain the AVChat archive from our site, follow these steps:
 4. Chmod the ***/wp-content/plugins/avchat3/uploadedFiles*** folder to 777 (otherwise the upload function might not work)
 5. Create a new folder tokens (***/wp-content/plugins/avchat3/tokens***) and CHMOD it to 777 (otherwise we might have token generation issues later on)
 6.  Activate the plugin from the admin area
-7.  Enter the rtmp connectionstring in Settings -> AVChat 3 . It should look like this:
+7.  Enter the rtmp connectionstring in Settings -> AVChat 3 (in the PRO version) . It should look like this:
 	***rtmp://myFMSserver.com/avchat30/_definst_***
     where myFMSserver.com is the domain name or ip of the server where your media server is installed.
+	Otherwise, got to the avc_settings.php file and look for the "connectionstring" property. There you should put the connection to your media server.
 8.  Create a new page with this content: ***[chat]***
 9.  Login the video chat, you will be asked for the license key (it's in your client/trial area on avchathq.com).
 10. That's it you're logged in the AVChat video chat.
@@ -56,7 +59,7 @@ A WordPress web site and AVChat Software ( http://avchat.net/integrations/wordpr
 
 Support options for clients:
 
-* Personalized support by email and updates for 1 year after the purchase.
+* Personalized support by email and updates for 1 year after the purchase of the PRO version.
 * Support forum: http://avchat.net/forum
 
 Support options for trial users and other users:
