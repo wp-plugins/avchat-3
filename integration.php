@@ -71,6 +71,14 @@ if($allowVisitors){
 	//--------------------------------------------------------------------	
 	$avconfig['username'] = 'AVChat_user_'.rand(0,999);
 	$avconfig['changeuser'] = 0;
+	
+	//----------------------------------------------------
+	//Deny access to chat admin to unauthorized users 
+	//----------------------------------------------------
+	if(isset($_GET['admin']) && $_GET['admin'] == 'true'){
+		$avconfig['showLoginError'] = 1;
+		return 0;	
+	}
 }else{
 	//------------------------------------------
 	//Deny chat access to unregistered users

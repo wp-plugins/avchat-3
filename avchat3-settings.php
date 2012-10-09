@@ -127,7 +127,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 		<tr>
 			<td style="text-align:left"><?php echo $value;?></td>
 			<?php 
-				foreach ($user_roles as $user_role){
+				foreach ($user_roles as $user_role => $name){
 					$user_permissions = $wpdb->get_results( "SELECT can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
 			?>
 				<td style="padding:0 10px !important"><input type="checkbox" <?php if($user_permissions[0]->$key){ echo 'checked="checked"';}?> name="<?php echo strtolower($user_role);?>-avp_<?php echo $key;?>" /></td>
