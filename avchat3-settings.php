@@ -140,7 +140,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 		<tr>
 			<td style="text-align:left"><?php echo $value;?></td>
 			<?php 
-				foreach ($user_roles as $user_role){
+				foreach ($user_roles as $user_role => $name){
 					$user_settings = $wpdb->get_results( "SELECT free_video_time, drop_in_room, max_streams, max_rooms FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
 			?>
 				<td style="padding:0 10px !important"><input type="text" name="<?php echo strtolower($user_role);?>-avs_<?php echo $key;?>" value="<?php echo $user_settings[0]->$key;?>" /></td>
