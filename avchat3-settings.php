@@ -1,7 +1,7 @@
 <?php
 /*
 
-Copyright (C) 2009-2010 Mihai Frentiu, avchat.net
+Copyright (C) 2009-2010 Stefan Nour, avchat.net
 
 This WordPress Plugin is distributed under the terms of the GNU General Public License.
 You can redistribute it and/or modify it under the terms of the GNU General Public License 
@@ -40,10 +40,9 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 					'invite_link' => 'Invite link',
 					'disconnect_link' => 'Disconnect button link',
 					'login_page_url' => 'Login page url',
-					'register_page_url' => 'Reegister page url' ,
+					'register_page_url' => 'Register page url' ,
 					'text_char_limit' => 'Char limit',
-					'background_image' => 'Background image URL',
-					'history_lenght' => 'History lenght',
+					'history_lenght' => 'History length',
 					'display_mode' => 'Display mode'
 	);
     
