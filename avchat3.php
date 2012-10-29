@@ -4,15 +4,15 @@ if(session_id() == ""){
 	}
 /**
  * @package AVChat3 Flash Video Chat
- * @author Mihai Frentiu
- * @version 1.0.1
+ * @author AVChat Software
+ * @version 1.1
  */
 /*
 Plugin Name: AVChat3 wrapped up as a plugin for wordpress
 Plugin URI: http://avchat.net/
 Description: This plugin integrates AVChat 3 into any wordpress blog.
-Author: Mihai Frentiu
-Version: 1.0.1
+Author: AVChat Software
+Version: 1.1
 Author URI: http://avchat.net/
 
 
