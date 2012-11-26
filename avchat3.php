@@ -12,7 +12,7 @@ Plugin Name: AVChat3 wrapped up as a plugin for wordpress
 Plugin URI: http://avchat.net/
 Description: This plugin integrates AVChat 3 into any wordpress blog.
 Author: Stefan Nour
-Version: 1.1
+Version: 1.2
 Author URI: http://avchat.net/
 
 
