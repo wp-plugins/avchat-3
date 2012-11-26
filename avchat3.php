@@ -1,23 +1,23 @@
 <?php
-if(session_id() == ""){ 
+if(session_id() == ""){
 		session_start();
 	}
 /**
  * @package AVChat3 Flash Video Chat
- * @author AVChat Software
- * @version 1.1
+ * @author Stefan Nour
+ * @version 1.0.1
  */
 /*
 Plugin Name: AVChat3 wrapped up as a plugin for wordpress
 Plugin URI: http://avchat.net/
 Description: This plugin integrates AVChat 3 into any wordpress blog.
-Author: AVChat Software
+Author: Stefan Nour
 Version: 1.1
 Author URI: http://avchat.net/
 
 
 
-Copyright (C) 2009-2010 Mihai Frentiu, avchat.net
+Copyright (C) 2009-2012 Stefan Nour, avchat.net
 
 This WordPress Plugin is distributed under the terms of the GNU General Public License.
 You can redistribute it and/or modify it under the terms of the GNU General Public License 
@@ -48,10 +48,20 @@ function avchat3_install(){
 			  can_send_files_to_users tinyint(1) NOT NULL,
 			  can_pm tinyint(1) NOT NULL,
 			  can_create_rooms tinyint(1) NOT NULL,
+			  can_watch_other_people_streams tinyint(1) NOT NULL,
+			  can_join_other_rooms tinyint(1) NOT NULL,
+			  show_users_online_stay tinyint(1) NOT NULL,
+			  view_who_is_watching_me tinyint(1) NOT NULL,
+			  can_block_other_users tinyint(1) NOT NULL,
+			  can_buzz tinyint(1) NOT NULL,
+			  can_stop_viewer tinyint(1) NOT NULL,
+			  can_ignore_pm tinyint(1) NOT NULL,
+			  typing_enabled tinyint(1) NOT NULL,
 			  free_video_time mediumint(5) NOT NULL,
 			  drop_in_room varchar(5) NOT NULL,
 			  max_streams mediumint(2) NOT NULL,
 			  max_rooms mediumint(2) NOT NULL,
+			  username_prefix varchar(10) NOT NULL,
 			  UNIQUE KEY id (id)
 			);
 				CREATE TABLE " . $table2_name . " (
@@ -61,9 +71,13 @@ function avchat3_install(){
 				login_page_url TEXT NOT NULL,
 				register_page_url TEXT NOT NULL,
 				text_char_limit mediumint(2) NOT NULL,
-				background_image TEXT NOT NULL,
 				history_lenght mediumint(3) NOT NULL,
-				display_mode ENUM ('embed', 'popup') NOT NULL
+				hide_left_side ENUM ('yes', 'no') NOT NULL,
+				p2t_default ENUM ('yes', 'no') NOT NULL,
+				flip_tab_menu ENUM ('top', 'bottom') NOT NULL,
+				display_mode ENUM ('embed', 'popup') NOT NULL,
+				allow_facebook_login ENUM ('yes', 'no') NOT NULL,
+				FB_appId TEXT NOT NULL
 				);
 			";		
    		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -74,17 +88,19 @@ function avchat3_install(){
 		}
 		
 		unset($user_roles['administrator']);
+		
+		$user_roles['visitors'] = "Visitors";
 	    
 		foreach($user_roles as $key=>$value){
 			$insert = "INSERT INTO " . $table_name .
-	            	  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, free_video_time, drop_in_room, max_streams, max_rooms) " .
-	                  "VALUES ('" . $key . "','1','0', '1', '1', '1', '1', '1', '1', '3600', 'r0', '4', '4')";
+	            	  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled, free_video_time, drop_in_room, max_streams, max_rooms) " .
+	                  "VALUES ('" . $key . "','1','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', 'r0', '4', '4')";
 			 $results = $wpdb->query( $insert );
 		}
 		
 		$insert = "INSERT INTO " . $table2_name .
-	            	  " (connection_string, invite_link, disconnect_link, login_page_url, register_page_url, text_char_limit, background_image, history_lenght) " .
-	                  "VALUES ('rtmp://','','/','/', '/', '200', 'pattern_061.gif', '20')";
+	            	  " (connection_string, invite_link, disconnect_link, login_page_url, register_page_url, text_char_limit, history_lenght, hide_left_side, p2t_default, flip_tab_menu, display_mode, allow_facebook_login, FB_appId) " .
+	                  "VALUES ('rtmp://','','/','/', '/', '200', '20', 'no', 'yes', 'top', 'embed', 'yes', '')";
 		$results = $wpdb->query( $insert );
    }	
 }
@@ -146,6 +162,22 @@ function avchat3_get_user_details(){
 	
 }
 
+function get_avchat3_visitor_permissions(){
+	global $wpdb;
+	
+	$query = "SELECT * FROM ".$wpdb->prefix . "avchat3_permissions"." WHERE user_role = 'visitors'";
+	$user_permissions = $wpdb->get_results($query);
+	
+	unset($user_permissions[0]->id);
+	unset($user_permissions[0]->user_role);
+	
+	foreach($user_permissions[0] as $key=>$value){
+		$user_info[$key] = $value;
+	}
+	
+	return $user_info;
+}
+
 function get_avchat3_general_settings(){
 	global $wpdb;
 	
@@ -195,8 +227,13 @@ function avchat3_set_user_details_on_session($user_info){
 	}
 	
 	if($user_info['user_id'] == "0"){
-		$_SESSION = array();
-		$_SESSION['user_logged_in'] = false;
+		//$_SESSION = array();
+		//$_SESSION['user_logged_in'] = false;
+		
+		$user_info = get_avchat3_visitor_permissions();
+		foreach($user_info as $key=>$val){
+			$_SESSION[$key] = $val;
+		}
 	}else{
 		$_SESSION['user_logged_in'] = true;
 		foreach($user_info as $key=>$val){
@@ -237,20 +274,59 @@ function avchat3_get_user_chat($content){
 			
 			
 			avchat3_set_avchat3_buddy_details_on_session($buddy_details);	
+		}	
+		
+		if($_SESSION['FB_appId'] != "") {
+			$FB_appId = $_SESSION['FB_appId'];
 		}
-				
+		else {
+			$FB_appId = "447812388589757";
+		}
+		
+			
 		if($display_mode == 'embed'){
-		$embed = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="index_obj" width="100%" height="600" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
-				 	<param name="movie" value="'.get_bloginfo('url').'/wp-content/plugins/avchat3/'.$movie_param.'?lstext=Loading Settings...&sscode=php" />
-					<param name="quality" value="high" />
-					<param name="bgcolor" value="#272727" />
-					<param name="allowScriptAccess" value="sameDomain" />
-					<param name="allowFullScreen" value="true" />
-					<param name="base" value="'.get_bloginfo('url').'/wp-content/plugins/avchat3/" />
-					<embed src="'.get_bloginfo('url').'/wp-content/plugins/avchat3/'.$movie_param.'?lstext=Loading Settings...&sscode=php" quality="high" bgcolor="#272727" width="100%" height="600" name="index_embed" align="middle" play="true" loop="false" quality="high" allowFullScreen="true" allowScriptAccess="sameDomain"	type="application/x-shockwave-flash" base="'.get_bloginfo('url').'/wp-content/plugins/avchat3/"	pluginspage="http://www.adobe.com/go/getflashplayer"></embed>
-				  </object>';
+		$embed = '
+			<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
+			<script type="text/javascript" src="wp-content/plugins/avchat3/facebook_integration.js"></script>
+			<script type="text/javascript" src="wp-content/plugins/avchat3/swfobject.js"></script>
+			<script type="text/javascript">
+				var flashvars = {
+					lstext : "Loading Settings...",
+					sscode : "php",
+					userId : ""
+				};
+				var params = {
+					quality : "high",
+					bgcolor : "#272727",
+					play : "true",
+					loop : "false",
+					allowFullScreen : "true",
+					base : "'.get_bloginfo("url").'/wp-content/plugins/avchat3/"
+				};
+				var attributes = {
+					name : "index_embed",
+					id :   "index_embed",
+					align : "middle"
+				};
+			</script>
+			<script type="text/javascript">
+			swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat3/'.$movie_param.'", "myContent", "100%", "600", "10.3.0", "", flashvars, params, attributes);</script>
+			<!-- This script changes the window title when a user receives a new message in chat -->
+			<script type="text/javascript">
+				function onNewMessageReceived(message){
+					document.title = "("+message+") AVChat 3.0 User Interface";
+				}
+				function onNewMessageRead(){
+					document.title = "AVChat 3.0 User Interface";
+				}
+			</script>
+				  
+			<div id="myContent">
+				<div id="av_message" style="color:#ff0000"> </div>
+			</div>
+			<script type="text/javascript" src="wp-content/plugins/avchat3/find_player.js"></script>';
 		}else{
-			$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat3/'.$movie_param.'?lstext=Loading Settings...&sscode=php&#39;,&#39;FlashVideoChat&#39;, &#39;height=500, Width=900&#39;';
+			$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat3/index_popup.php?movie_param='.$movie_param.'&#39;';
   			$page_content = '<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.$chat_window.')">Open chat in popup</a>';
 			
 			$embed = $page_content;

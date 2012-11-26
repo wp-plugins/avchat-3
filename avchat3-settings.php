@@ -1,7 +1,7 @@
 <?php
 /*
 
-Copyright (C) 2009-2010 Stefan Nour, avchat.net
+Copyright (C) 2009-2012 AVChat Software, avchat.net
 
 This WordPress Plugin is distributed under the terms of the GNU General Public License.
 You can redistribute it and/or modify it under the terms of the GNU General Public License 
@@ -21,29 +21,44 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 					'can_access_chat' => 'Can access chat',
 					'can_access_admin_chat' => 'Can access admin chat',
 					'can_publish_audio_video' =>  'Can publish audio & video stream',
-					'can_stream_private' => 'Can stream private',
-					'can_send_files_to_rooms' => 'Can send files to rooms',
-					'can_send_files_to_users' => 'Can send files to users',
+					'can_stream_private' => 'Can stream private (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_send_files_to_rooms' => 'Can send files to rooms (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_send_files_to_users' => 'Can send files to users (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
 					'can_pm' => 'Can send private messages',
-					'can_create_rooms' => 'Can create rooms'
+					'can_create_rooms' => 'Can create rooms',
+					'can_watch_other_people_streams' => 'Can watch other people streams (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_join_other_rooms' => 'Can join other rooms (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'show_users_online_stay' => 'Show users how much they stayed online (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'view_who_is_watching_me' => 'Ability for the users to see who is watching them (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_block_other_users' => 'Can block other users (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_buzz' => 'Can buzz (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_stop_viewer' => 'Can stop viewer (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'can_ignore_pm' => 'Can ignore private messages (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'typing_enabled' => 'Typing enabled (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)'
 	);
 	
 	$settings = array(
-					'free_video_time' => 'Free video time',
-					'drop_in_room' => 'Drop in room',
+					'free_video_time' => 'Free video time (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'drop_in_room' => 'Drop in room (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
 					'max_streams' => 'Max streams a user can watch',
-					'max_rooms' => 'Max rooms one can be in'
+					'max_rooms' => 'Max rooms one can be in',
+					'username_prefix' => 'Username prefix (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
 	);
 	
 	$general_settings = array(
-					'connection_string' => 'Connection string',
-					'invite_link' => 'Invite link',
-					'disconnect_link' => 'Disconnect button link',
+					'connection_string' => 'Connection string*',
+					'invite_link' => 'Invite link (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'disconnect_link' => 'Disconnect button link (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
 					'login_page_url' => 'Login page url',
 					'register_page_url' => 'Register page url' ,
-					'text_char_limit' => 'Char limit',
-					'history_lenght' => 'History length',
-					'display_mode' => 'Display mode'
+					'text_char_limit' => 'Char limit (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'history_lenght' => 'History length (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'flip_tab_menu' => 'Flip Tab Menu (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'hide_left_side' => 'Hide Left Side (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'p2t_default' => 'Push 2 Talk default (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'display_mode' => 'Display mode (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'allow_facebook_login' => 'Allow Facebook login (<a href="http://avchat.net/integrations/wordpress" target="_blank">PRO</a>)',
+					'FB_appId' => 'Facebook application ID*',
 	);
     
 	
@@ -90,6 +105,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 		}
 		
 		$query = "UPDATE ".$table_general_settings." SET ".$updateString;
+		//var_dump($query);
 		$wpdb->query($query);
 	}
 	
@@ -103,7 +119,9 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 	
 	unset($user_roles['administrator']);
 	
+	$user_roles['visitors'] = "Visitors";
 	
+	//var_dump($user_roles);
 	
 ?>
 
@@ -127,9 +145,28 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 			<td style="text-align:left"><?php echo $value;?></td>
 			<?php 
 				foreach ($user_roles as $user_role => $name){
-					$user_permissions = $wpdb->get_results( "SELECT can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
+					$user_permissions = $wpdb->get_results( "SELECT can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
 			?>
-				<td style="padding:0 10px !important"><input type="checkbox" <?php if($user_permissions[0]->$key){ echo 'checked="checked"';}?> name="<?php echo strtolower($user_role);?>-avp_<?php echo $key;?>" /></td>
+				<td style="padding:0 10px !important"><input type="checkbox" 
+					<?php 
+						if($user_permissions[0]->$key){ echo 'checked="checked"';}
+						if(
+							$key == "can_stream_private" ||
+							$key == "can_send_files_to_rooms" ||
+							$key == "can_send_files_to_users" ||
+							$key == "can_watch_other_people_streams" ||
+							$key == "can_join_other_rooms" ||
+							$key == "show_users_online_stay" ||
+							$key == "view_who_is_watching_me" ||
+							$key == "can_block_other_users" ||
+							$key == "can_buzz" ||
+							$key == "can_stop_viewer" ||
+							$key == "can_ignore_pm" ||
+							$key == "typing_enabled"
+							
+							) { echo 'disabled="disabled"';}
+					?> 
+					name="<?php echo strtolower($user_role);?>-avp_<?php echo $key;?>" /></td>
 			<?php }?>
 		</tr>
 		<?php }?>
@@ -140,9 +177,15 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 			<td style="text-align:left"><?php echo $value;?></td>
 			<?php 
 				foreach ($user_roles as $user_role => $name){
-					$user_settings = $wpdb->get_results( "SELECT free_video_time, drop_in_room, max_streams, max_rooms FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
+					$user_settings = $wpdb->get_results( "SELECT free_video_time, drop_in_room, max_streams, max_rooms, username_prefix FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
 			?>
-				<td style="padding:0 10px !important"><input type="text" name="<?php echo strtolower($user_role);?>-avs_<?php echo $key;?>" value="<?php echo $user_settings[0]->$key;?>" /></td>
+				<td style="padding:0 10px !important"><input type="text" 
+					<?php 
+						if($key == "free_video_time" || 
+							$key == "drop_in_room" || 
+							$key == "username_prefix" ) { echo 'readonly="true"';}
+					?> 
+				name="<?php echo strtolower($user_role);?>-avs_<?php echo $key;?>" value="<?php echo $user_settings[0]->$key;?>" /></td>
 			<?php }?>
 		</tr>
 		<?php }?>
@@ -155,13 +198,40 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 		<tr>
 			<td style="text-align:left"><?php echo $value;?></td>
 			<td style="padding:0 10px !important;text-align:left;" colspan="4">
-				<?php if($key == 'display_mode'){?>
-				<select name="avgsetting_<?php echo $key?>">
-					<option <?php if ($av_general_settings[0]->$key == 'popup') {echo 'selected="selected"';}?> value="popup">Popup</option>
-					<option <?php if ($av_general_settings[0]->$key == 'embed') {echo 'selected="selected"';}?> value="embed">Embed</option>
-				</select>
-				<?php }else{?>
-				<input size="50" type="text" name="avgsetting_<?php echo $key;?>" value="<?php echo $av_general_settings[0]->$key; ?>" />
+				<?php 
+				switch ($key) {
+					case 'display_mode':
+					?>
+						<select name="avgsetting_<?php echo $key?>"  disabled="disabled">
+							<option <?php if ($av_general_settings[0]->$key == 'popup') {echo 'selected="selected"';}?> value="popup">Popup</option>
+							<option <?php if ($av_general_settings[0]->$key == 'embed') {echo 'selected="selected"';}?> value="embed">Embed</option>
+						</select>
+					<?php
+						break;
+					case ($key == 'allow_facebook_login' || $key == 'hide_left_side' || $key == 'p2t_default'):
+					?>
+						<select name="avgsetting_<?php echo $key?>"  disabled="disabled">
+							<option <?php if ($av_general_settings[0]->$key == 'yes') {echo 'selected="selected"';}?> value="yes">Yes</option>
+							<option <?php if ($av_general_settings[0]->$key == 'no') {echo 'selected="selected"';}?> value="no">No</option>
+						</select> 
+					<?php
+						break;
+					case 'flip_tab_menu':
+					?>
+						<select name="avgsetting_<?php echo $key?>"  disabled="disabled">
+							<option <?php if ($av_general_settings[0]->$key == 'top') {echo 'selected="selected"';}?> value="top">Top</option>
+							<option <?php if ($av_general_settings[0]->$key == 'bottom') {echo 'selected="selected"';}?> value="bottom">Bottom</option>
+						</select> 
+					<?php
+						break;
+						case ($key == 'history_lenght' || $key == 'text_char_limit' || $key == 'invite_link' || $key == 'disconnect_link'):
+					?>
+						<input size="50" type="text" name="avgsetting_<?php echo $key;?>" readonly="true" value="<?php echo $av_general_settings[0]->$key; ?>" />
+					<?php
+						break;
+					default :
+					?>
+						<input size="50" type="text" name="avgsetting_<?php echo $key;?>" value="<?php echo $av_general_settings[0]->$key; ?>" />
 				<?php }?>
 			</td>
 		</tr>
