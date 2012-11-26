@@ -5,7 +5,7 @@ if(session_id() == ""){
 /**
  * @package AVChat3 Flash Video Chat
  * @author Stefan Nour
- * @version 1.0.1
+ * @version 1.2
  */
 /*
 Plugin Name: AVChat3 wrapped up as a plugin for wordpress
@@ -174,6 +174,7 @@ function get_avchat3_visitor_permissions(){
 	foreach($user_permissions[0] as $key=>$value){
 		$user_info[$key] = $value;
 	}
+	$user_info['user_role'] = 'visitor';
 	
 	return $user_info;
 }
@@ -226,22 +227,16 @@ function avchat3_set_user_details_on_session($user_info){
 		session_start();
 	}
 	
+	
 	if($user_info['user_id'] == "0"){
-		//$_SESSION = array();
-		//$_SESSION['user_logged_in'] = false;
-		
 		$user_info = get_avchat3_visitor_permissions();
-		foreach($user_info as $key=>$val){
-			$_SESSION[$key] = $val;
-		}
 	}else{
 		$_SESSION['user_logged_in'] = true;
-		foreach($user_info as $key=>$val){
+	}
+	
+	foreach($user_info as $key=>$val){
 			$_SESSION[$key] = $val;
 		}
-		
-		
-	}
 }
 
 function avchat3_clear_session(){
@@ -257,9 +252,12 @@ function avchat3_get_user_chat($content){
 		
 		if($user_info['user_role'] == 'administrator' || $user_info['can_access_admin_chat']){
 			$movie_param = 'admin.swf';
+			
 		}else{
 			$movie_param = 'index.swf';
 		}
+		
+		//$_SESSION['raluca'] = 'administrator';
 		
 		$display_mode = get_avchat3_general_setting('display_mode')->display_mode;
 		

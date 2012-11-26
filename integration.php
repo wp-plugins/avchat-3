@@ -40,7 +40,7 @@ if($_SESSION['history_lenght'] != ""){
 
 $avconfig['connectionstring']= $_SESSION['connection_string'];
 
-if($_SESSION['flip_tab_menu'] == 'yes'){
+if($_SESSION['flip_tab_menu'] == 'bottom'){
 	$avconfig['flipTabMenu'] = 1;
 }
 else
@@ -72,6 +72,8 @@ else
 	$avconfig['enableOtherAccountOptions'] = 0;
 }
 
+
+$role = $_SESSION['user_role'];
 
 
 
