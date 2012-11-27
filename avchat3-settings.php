@@ -73,6 +73,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 			}
 		}
 		
+		//var_dump($_POST);
 		
 		
 		foreach ($avconf_arr as $key=>$vals){
@@ -93,6 +94,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 			
 			
 			$query = "UPDATE ".$table_permissions." SET ".$updateString." WHERE user_role = '".$key."'";
+			//var_dump($query);
 			$wpdb->query($query);
 		}
 		
@@ -147,7 +149,8 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 				foreach ($user_roles as $user_role => $name){
 					$user_permissions = $wpdb->get_results( "SELECT can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
 			?>
-				<td style="padding:0 10px !important"><input type="checkbox" 
+				<td style="padding:0 10px !important">
+					<input type="checkbox" 
 					<?php 
 						if($user_permissions[0]->$key){ echo 'checked="checked"';}
 						if(
@@ -166,7 +169,29 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 							
 							) { echo 'disabled="disabled"';}
 					?> 
-					name="<?php echo strtolower($user_role);?>-avp_<?php echo $key;?>" /></td>
+					name="<?php echo strtolower($user_role);?>-avp_<?php echo $key;?>" />
+					<?php 
+						if( $key == "can_stream_private" ||
+							$key == "can_send_files_to_rooms" ||
+							$key == "can_send_files_to_users" ||
+							$key == "can_watch_other_people_streams" ||
+							$key == "can_join_other_rooms" ||
+							$key == "show_users_online_stay" ||
+							$key == "view_who_is_watching_me" ||
+							$key == "can_block_other_users" ||
+							$key == "can_buzz" ||
+							$key == "can_stop_viewer" ||
+							$key == "can_ignore_pm" ||
+							$key == "typing_enabled"
+							){?>
+							<input type="hidden" name="<?php echo strtolower($user_role);?>-avp_<?php echo $key;?>" value="<?php
+									if($user_permissions[0]->$key){ 
+										  echo '1';}
+									else{ echo '0';}?>" /><?php
+							}
+					?>		
+					
+					</td>
 			<?php }?>
 		</tr>
 		<?php }?>
