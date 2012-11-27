@@ -110,7 +110,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 	}
 	
 	
-	$location = get_option('siteurl') . '/wp-admin/admin.php?page=avchat3/avchat3-settings.php'; 
+	$location = get_option('siteurl') . '/wp-admin/admin.php?page=avchat-3/avchat3-settings.php'; 
 	$user_roles = array();
 	
 	foreach($wp_roles->roles as $role => $details){

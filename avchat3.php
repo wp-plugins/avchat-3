@@ -3,21 +3,21 @@ if(session_id() == ""){
 		session_start();
 	}
 /**
- * @package AVChat3 Flash Video Chat
- * @author Stefan Nour
+ * @package AVChat Video Chat Plugin for WordPress
+ * @author  AVChat Software
  * @version 1.2
  */
 /*
-Plugin Name: AVChat3 wrapped up as a plugin for wordpress
-Plugin URI: http://avchat.net/
-Description: This plugin integrates AVChat 3 into any wordpress blog.
-Author: Stefan Nour
+Plugin Name: AVChat Video Chat Plugin for WordPress
+Plugin URI: http://avchat.net/integrations/wordpress
+Description: This plugin integrates AVChat 3 into any WordPress website.
+Author: AVChat Software
 Version: 1.2
 Author URI: http://avchat.net/
 
 
 
-Copyright (C) 2009-2012 Stefan Nour, avchat.net
+Copyright (C) 2009-2012 AVChat Software, avchat.net
 
 This WordPress Plugin is distributed under the terms of the GNU General Public License.
 You can redistribute it and/or modify it under the terms of the GNU General Public License 
@@ -94,7 +94,7 @@ function avchat3_install(){
 		foreach($user_roles as $key=>$value){
 			$insert = "INSERT INTO " . $table_name .
 	            	  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled, free_video_time, drop_in_room, max_streams, max_rooms) " .
-	                  "VALUES ('" . $key . "','1','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', 'r0', '4', '4')";
+	                  "VALUES ('" . $key . "','1','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
 			 $results = $wpdb->query( $insert );
 		}
 		
@@ -285,8 +285,8 @@ function avchat3_get_user_chat($content){
 		if($display_mode == 'embed'){
 		$embed = '
 			<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
-			<script type="text/javascript" src="wp-content/plugins/avchat3/facebook_integration.js"></script>
-			<script type="text/javascript" src="wp-content/plugins/avchat3/swfobject.js"></script>
+			<script type="text/javascript" src="wp-content/plugins/avchat-3/facebook_integration.js"></script>
+			<script type="text/javascript" src="wp-content/plugins/avchat-3/swfobject.js"></script>
 			<script type="text/javascript">
 				var flashvars = {
 					lstext : "Loading Settings...",
@@ -299,7 +299,7 @@ function avchat3_get_user_chat($content){
 					play : "true",
 					loop : "false",
 					allowFullScreen : "true",
-					base : "'.get_bloginfo("url").'/wp-content/plugins/avchat3/"
+					base : "'.get_bloginfo("url").'/wp-content/plugins/avchat-3/"
 				};
 				var attributes = {
 					name : "index_embed",
@@ -308,7 +308,7 @@ function avchat3_get_user_chat($content){
 				};
 			</script>
 			<script type="text/javascript">
-			swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat3/'.$movie_param.'", "myContent", "100%", "600", "10.3.0", "", flashvars, params, attributes);</script>
+			swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "10.3.0", "", flashvars, params, attributes);</script>
 			<!-- This script changes the window title when a user receives a new message in chat -->
 			<script type="text/javascript">
 				function onNewMessageReceived(message){
@@ -322,9 +322,9 @@ function avchat3_get_user_chat($content){
 			<div id="myContent">
 				<div id="av_message" style="color:#ff0000"> </div>
 			</div>
-			<script type="text/javascript" src="wp-content/plugins/avchat3/find_player.js"></script>';
+			<script type="text/javascript" src="wp-content/plugins/avchat-3/find_player.js"></script>';
 		}else{
-			$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat3/index_popup.php?movie_param='.$movie_param.'&#39;';
+			$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat-3/index_popup.php?movie_param='.$movie_param.'&#39;';
   			$page_content = '<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.$chat_window.')">Open chat in popup</a>';
 			
 			$embed = $page_content;
@@ -333,7 +333,7 @@ function avchat3_get_user_chat($content){
 }
 
 function avchat3_admin_config(){
-	add_options_page('AVChat3 Permissions & Config', 'AVChat3',  'manage_options', 'avchat3/avchat3-settings.php');
+	add_options_page('AVChat3 Permissions & Config', 'AVChat3',  'manage_options', 'avchat-3/avchat3-settings.php');
 }
 
 register_activation_hook(__FILE__,'avchat3_install');
