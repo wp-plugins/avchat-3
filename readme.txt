@@ -37,9 +37,9 @@ After you obtain the AVChat archive from our site, follow these steps :
 
 1. Connect to your web site hosting account using FTP
 2. Upload the avchat3 folder (from avchat-3.zip) to your ***/wp-content/plugins*** folder
-3. Upload the contents of the folder named Files to upload to your web site from the AVChat 3.0.zip archive to ***/wp-content/plugins/avchat3/***
-4. Chmod the ***/wp-content/plugins/avchat3/uploadedFiles*** folder to 777 (otherwise the upload function might not work)
-5. Create a new folder tokens (***/wp-content/plugins/avchat3/tokens***) and CHMOD it to 777 (otherwise we might have token generation issues later on)
+3. Upload the contents of the folder named Files to upload to your web site from the AVChat 3.0.zip archive to ***/wp-content/plugins/avchat-3/***
+4. Chmod the ***/wp-content/plugins/avchat-3/uploadedFiles*** folder to 777 (otherwise the upload function might not work)
+5. Create a new folder tokens (***/wp-content/plugins/avchat-3/tokens***) and CHMOD it to 777 (otherwise we might have token generation issues later on)
 6.  Go to WordPress admin area and activate the plugin from the Plugins page
 7.  Enter the rtmp connectionstring in Settings -> AVChat 3 (in the PRO version) . It should look like this:
 	***rtmp://myFMSserver.com/avchat30/_definst_***
@@ -49,7 +49,7 @@ After you obtain the AVChat archive from our site, follow these steps :
 9.  Login the video chat, you will be asked for the license key (it's in your client/trial area on avchathq.com).
 10. That's it you're logged in the AVChat video chat.
 
-Get ***FREE*** installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for Wordpress'> PRO version </a> of the plugin, plus other much welcome additions.
+Get ***FREE*** installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for Wordpress'> PRO version </a> of the plugin, plus much more features that you can customize to make your personalized chat.
 
 
 For further information, see <a href='http://avchat.net/support/documentation/wordpress' title='Buy AVChat'>our detailed documentation</a>
@@ -80,3 +80,22 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 4. Video-chat with another person 
 
 5. Video chat permissions for the PRO Version
+
+== Changelog ==
+ 
+= 1.2 =
+* Added Facebook integration.
+* Added iPad detection.
+* Added new "Visitors" column to better control what a visitor can have access to.
+* Added lots of new features in WordPress backend.
+* Now the changes made to the background are made from the style.css and not from the WordPress backend settings.
+* Fixed the bug where guests can access the admin area of AVChat.
+* Fixed the bug where the added user roles were not recognized by the AVChat and were not saved the changes made in WordPress backend.
+ 
+= 1.1 =
+* Fixed bug with "session already sent".
+* Fixed the bug where IE didn't recognize the path to the video chat and couldn't log in.
+* Updated the documentation.
+ 
+= 1.0 =
+* First release.
