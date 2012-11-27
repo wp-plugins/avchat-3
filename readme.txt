@@ -24,13 +24,13 @@ If you have purchased AVChat and your website is based on WordPress this plugin 
 * you can choose the video chat location: embedded or popup (PRO version)
 * having access to the most important settings directly from the WrodPress admin area (PRO version)
 
-The PRO version can be bought from <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for Wordpress'>our website</a> and costs 49$.
+The PRO version can be bought from <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>our website</a> and costs 49$.
 With the PRO version you get access to more configuration options and also 1 year of full support and updates , and free installation. And of course, our gratitude for helping us sustain this plugin.
 
 The AVChat Video Chat plugin for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
 == Installation ==
-For this plugin to work, ***you first need to buy or get a trial of the AVChat Video Chat software*** from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>. This plugin only takes care of the integration with Wordpress of the AVChat software, but does not contain the actual video chat.
+For this plugin to work, ***you first need to buy or get a trial of the AVChat Video Chat software*** from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>. This plugin only takes care of the integration with WordPress of the AVChat software, but does not contain the actual video chat.
 
 
 After you obtain the AVChat archive from our site, follow these steps :
@@ -49,7 +49,7 @@ After you obtain the AVChat archive from our site, follow these steps :
 9.  Login the video chat, you will be asked for the license key (it's in your client/trial area on avchathq.com).
 10. That's it you're logged in the AVChat video chat.
 
-Get ***FREE*** installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for Wordpress'> PRO version </a> of the plugin, plus much more features that you can customize to make your personalized chat.
+Get ***FREE*** installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'> PRO version </a> of the plugin, plus much more features that you can customize to make your personalized chat.
 
 
 For further information, see <a href='http://avchat.net/support/documentation/wordpress' title='Buy AVChat'>our detailed documentation</a>
@@ -75,11 +75,11 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 
 2. Create a new room
 
-3. Share content among users
+3. Video-chat with another person 
 
-4. Video-chat with another person 
+4. Video chat permissions 
 
-5. Video chat permissions for the PRO Version
+5. Video chat settings
 
 == Changelog ==
  
