@@ -25,7 +25,7 @@ If you have AVChat than this Standard version of the plugin will take care of :
 
 The above features are for the Standard version which you can use to see the potential of the video chat solution on your site. You can download it for Free from this page.
 
-> #### Get your <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>PRO version now !!! </a>.  
+> #### Get your #<a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>PRO version </a> now !!! .  
 > Offering more advanced features, additional settings and permissions, free installation and 1 year of support and updates, the <a href='http://avchat.net/integrations/wordpress' title='AVChat Video Chat plugin for WordPress'>AVChat Video Chat plugin PRO</a> is the ultimate sollution for a perfect WordPress video chat. 
 
 With the PRO version you get more than 20 new configuration options and permissions that you can customize for each user role. Also you get free installation and 1 year of full support and updates. And of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into development.
@@ -78,11 +78,11 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 
 == Screenshots ==
 
-1. Login Screen
+1. Video chat with another person
 
-2. Create a new room
+2. Login Screen 
 
-3. Video chat with another person 
+3. Create a new room
 
 4. Video chat permissions 
 
@@ -108,5 +108,5 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 * Fixed the bug where IE didn't recognize the path to the video chat and couldn't log in.
 * Updated the documentation.
  
-= 1.0 (12.06.2012)=
+= 1.0 (12.06.2012) =
 * First release in WordPress plugin directory.
