@@ -5,14 +5,14 @@ if(session_id() == ""){
 /**
  * @package AVChat Video Chat Plugin for WordPress
  * @author  AVChat Software
- * @version 1.2
+ * @version 1.2.1
  */
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://avchat.net/integrations/wordpress
 Description: This plugin integrates AVChat 3 into any WordPress website.
 Author: AVChat Software
-Version: 1.2
+Version: 1.2.1
 Author URI: http://avchat.net/
 
 
@@ -285,8 +285,8 @@ function avchat3_get_user_chat($content){
 		if($display_mode == 'embed'){
 		$embed = '
 			<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
-			<script type="text/javascript" src="wp-content/plugins/avchat-3/facebook_integration.js"></script>
-			<script type="text/javascript" src="wp-content/plugins/avchat-3/swfobject.js"></script>
+			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/facebook_integration.js"></script>
+			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/swfobject.js"></script>
 			<script type="text/javascript">
 				var flashvars = {
 					lstext : "Loading Settings...",
@@ -322,7 +322,7 @@ function avchat3_get_user_chat($content){
 			<div id="myContent">
 				<div id="av_message" style="color:#ff0000"> </div>
 			</div>
-			<script type="text/javascript" src="wp-content/plugins/avchat-3/find_player.js"></script>';
+			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/find_player.js"></script>';
 		}else{
 			$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat-3/index_popup.php?movie_param='.$movie_param.'&#39;';
   			$page_content = '<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.$chat_window.')">Open chat in popup</a>';
