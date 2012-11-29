@@ -94,8 +94,7 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 
 == Changelog ==
  
- = 1.2.1 (29.11.2012 - build 1941) =
- 
+= 1.2.1 (29.11.2012 - build 1941) =
 * Added support to know when the AVChat files are not copied into the plugin directory.
 * Fixed bug with javascripts missing.
 * Removed padding in AVChat Settings in WordPress backend.

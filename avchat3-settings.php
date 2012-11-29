@@ -210,7 +210,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 							$key == "drop_in_room" || 
 							$key == "username_prefix" ) { echo 'readonly="true"';}
 					?> 
-				name="<?php echo strtolower($user_role);?>-avs_<?php echo $key;?>" value="<?php echo $user_settings[0]->$key;?>" /></td>
+				name="<?php echo strtolower($user_role);?>-avs_<?php echo $key;?>" style="width:80px" value="<?php echo $user_settings[0]->$key;?>" /></td>
 			<?php }?>
 		</tr>
 		<?php }?>
