@@ -95,7 +95,7 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 == Changelog ==
 
 = 1.3 (17.12.2012 - build 2055) =
-* ***!NEW***     HTML5 mobile version, now available for iOS and Android. Automatic recognition of mobile version.
+* ***NEW!***     HTML5 mobile version, now available for iOS and Android. Automatic recognition of mobile version.
 * Added support for Administrators user role.
 * Don't miss new messages. Now you will see if you have notifications in the browser tab, while browsing other tabs.
 * Fixed issue with chat appearing lower on the page.
