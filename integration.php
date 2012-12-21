@@ -23,12 +23,18 @@ if($_SESSION['disconnect_link'] != ""){
 	$avconfig['disconnectButtonLink'] = $_SESSION['disconnect_link'];
 }
 
-if($_SESSION['login_page_url'] != ""){
+if($_SESSION['login_page_url'] != "" && $_SESSION['login_page_url'] != "/"){
 	$avconfig['loginPageURL']= $_SESSION['login_page_url'];
 }
+else{
+	$avconfig['loginPageURL']= "../../../wp-login.php";
+}
 
-if($_SESSION['register_page_url'] != ""){
+if($_SESSION['register_page_url'] != "" && $_SESSION['login_page_url'] != "/"){
 	$avconfig['registerPageURL']= $_SESSION['register_page_url'];
+}
+else{
+	$avconfig['registerPageURL']= "../../../wp-login.php?action=register";
 }
 
 $avconfig['textChatCharLimit']= $_SESSION['text_char_limit'];
@@ -74,6 +80,8 @@ else
 
 
 $role = $_SESSION['user_role'];
+//var_dump($role);
+//die();
 
 
 
@@ -82,7 +90,12 @@ if($role != "administrator"){
 	//Config settings & permission for non administrators
 	//----------------------------------------------------
 	if($_SESSION['can_access_chat'] != '1'){
-		$avconfig['showLoginError'] = 1;
+		if($role != "visitors"){
+			$avconfig['showUserLevelError'] = 1;
+		}
+		else{
+			$avconfig['showLoginError'] = 1;
+		}
 	}else{		
 		//-----------------------------------------
 		//Config send audio/video permission
@@ -275,7 +288,7 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//Config username
 	//-----------------------------------------
 	$avconfig['username'] = $_SESSION['user_login'];
-	$avconfig['changeuser'] = 1;
+	//$avconfig['changeuser'] = 1;
 	//-----------------------------------------
 	//Get user role
 	//-----------------------------------------
@@ -298,8 +311,12 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//----------------------------------------------------
 	if(isset($_GET['admin']) && $_GET['admin'] == 'true'){
 		if($_SESSION['user_role'] != "administrator" && !$_SESSION['can_access_admin_chat']){
-			
-			$avconfig['showLoginError'] = 1;
+			if($role != "visitors"){
+				$avconfig['showUserLevelError'] = 1;
+			}
+			else{
+				$avconfig['showLoginError'] = 1;
+			}
 			return 0;
 			
 		}	
@@ -318,7 +335,12 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//Deny access to chat admin to unauthorized users 
 	//----------------------------------------------------
 	if(isset($_GET['admin']) && $_GET['admin'] == 'true'){
-		$avconfig['showLoginError'] = 1;
+		if($role != "visitors"){
+			$avconfig['showUserLevelError'] = 1;
+		}
+		else{
+			$avconfig['showLoginError'] = 1;
+		}
 		return 0;
 	}
 	

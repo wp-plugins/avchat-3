@@ -1,9 +1,9 @@
 === Video Chat Plugin ===
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat
 Requires at least: 3.0.0
-Tested up to: 3.4
-Stable tag: 1.2.1
-Version : 1.2.1
+Tested up to: 3.5
+Stable tag: 1.3
+Version : 1.3
 Contributors: stefan.avchat
 License: GPLv2 or later
 
@@ -43,7 +43,7 @@ For this plugin to work, ***you first need to buy or get a trial of the AVChat V
 After you obtain the AVChat archive from our site, follow these steps :
 
 1. Connect to your web site hosting account using FTP
-2. Upload the avchat3 folder (from avchat-3.zip) to your ***/wp-content/plugins*** folder
+2. Upload the avchat-3 folder (from avchat-3.zip) to your ***/wp-content/plugins*** folder
 3. Upload the contents of the folder named Files to upload to your web site from the AVChat 3.0.zip archive to ***/wp-content/plugins/avchat-3/***
 4. Chmod the ***/wp-content/plugins/avchat-3/uploadedFiles*** folder to 777 (otherwise the upload function might not work)
 5. Create a new folder tokens (***/wp-content/plugins/avchat-3/tokens***) and CHMOD it to 777 (otherwise we might have token generation issues later on)
@@ -93,6 +93,12 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 7. PRO vs Standard
 
 == Changelog ==
+
+= 1.3 (17.12.2012 - build 2055) =
+* ***!NEW***     HTML5 mobile version, now available for iOS and Android. Automatic recognition of mobile version.
+* Added support for Administrators user role.
+* Don't miss new messages. Now you will see if you have notifications in the browser tab, while browsing other tabs.
+* Fixed issue with chat appearing lower on the page.
 
 = 1.2.1 (29.11.2012 - build 1941) =
 * Added support to know when the AVChat files are not copied into the plugin directory.
