@@ -11,11 +11,13 @@ The AVChat Video Chat Plugin for WordPress is designed to increase members engag
 
 == Description ==
 
+> #### NEW! HTML5 compatible! Get your favorite chat on your tablets or mobile phones.
+
 The Video Chat Plugin for WordPress handles the integration between AVChat and your WordPress website.
 
 <a href='http://avchat.net/features' title='AVChat software'>AVChat</a> is an highly appreciated video chat script that can be hosted by you and installed on your website. You can find out <a href='http://avchat.net/features' title='AVChat software'>more about it</a> and purchase it from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>.
 
-If you have AVChat than this Standard version of the plugin will take care of :
+If you have AVChat, than this Standard version of the plugin will take care of :
 
 * username integration (users logged in the WordPress web site will not have to login again in the video chat )
 * setting up the most important permissions/limits/features for each user role from WordPress admin area
