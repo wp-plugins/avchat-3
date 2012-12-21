@@ -12,7 +12,7 @@ The AVChat Video Chat Plugin for WordPress is designed to increase members engag
 == Description ==
 
 > #### NEW !!!
-> #### HTML5 compatible! #### Get your favorite chat on your tablets or mobile phones.
+> #### HTML5 compatible! Now on you can chat from your tablets or mobile phones.
 
 The Video Chat Plugin for WordPress handles the integration between AVChat and your WordPress website.
 
