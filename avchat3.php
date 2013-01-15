@@ -134,7 +134,8 @@ function avchat3_get_user_details(){
 		}
 		*/
 		
-		$av3_current_blog_capabilities = 'wp_capabilities';
+		//$av3_current_blog_capabilities = 'wp_capabilities';
+		$av3_current_blog_capabilities = $current_user->cap_key;
 		
 		$user_roles = array_keys($current_user->$av3_current_blog_capabilities);
 		
