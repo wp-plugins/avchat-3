@@ -2,8 +2,8 @@
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat
 Requires at least: 3.0.0
 Tested up to: 3.5
-Stable tag: 1.3.2
-Version : 1.3.2
+Stable tag: 1.3.3
+Version : 1.3.3
 Contributors: stefan.avchat
 License: GPLv2 or later
 

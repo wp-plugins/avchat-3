@@ -5,14 +5,14 @@ if(session_id() == ""){
 /**
  * @package AVChat Video Chat Plugin for WordPress
  * @author  AVChat Software
- * @version 1.3.2
+ * @version 1.3.3
  */
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/avchat-3/
 Description: This plugin integrates AVChat 3 into any WordPress website.
 Author: AVChat Software
-Version: 1.3.2
+Version: 1.3.3
 Author URI: http://avchat.net/
 
 
