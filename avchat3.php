@@ -333,7 +333,7 @@ function avchat3_get_user_chat($content){
 }
 
 function avchat3_admin_config(){
-	add_options_page('AVChat3 Permissions & Config', 'AVChat3',  'manage_options', 'avchat-3/avchat3-settings.php');
+	add_options_page('AVChat 3 Permissions & Config', 'AVChat3',  'manage_options', 'avchat-3/avchat3-settings.php');
 }
 
 register_activation_hook(__FILE__,'avchat3_install');
