@@ -94,19 +94,26 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 
 == Changelog ==
 
-= 1.3 (17.12.2012 - build 2055) =
+= 1.3.3 (11.04.2013) =
+* fixed some minor typos including removing the "PRO" from the plugin name as it shows up in the WP backend
+
+= 1.3.2 (06.03.2013) =
+
+= 1.3.1 (21.02.2013) =
+
+= 1.3 (17.12.2012) =
 * ***NEW!***     HTML5 mobile version, now available for iOS and Android. Automatic recognition of mobile version.
 * Added support for Administrators user role.
 * Don't miss new messages. Now you will see if you have notifications in the browser tab, while browsing other tabs.
 * Fixed issue with chat appearing lower on the page.
 
-= 1.2.1 (29.11.2012 - build 1941) =
+= 1.2.1 (29.11.2012) =
 * Added support to know when the AVChat files are not copied into the plugin directory.
 * Fixed bug with javascripts missing.
 * Removed padding in AVChat Settings in WordPress backend.
 * More explicit texts in AVChat Settings in WordPress backend.
  
-= 1.2 (27.11.2012 - build 1925) =
+= 1.2 (27.11.2012) =
 * Added Facebook integration.
 * Added iPad detection.
 * Added new "Visitors" column to better control what a visitor can have access to.
@@ -115,7 +122,7 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 * Fixed the bug where guests can access the admin area of AVChat.
 * Fixed the bug where the added user roles were not recognized by the AVChat and were not saved the changes made in WordPress backend.
  
-= 1.1 (29.10.2012 - build 1850) =
+= 1.1 (29.10.2012) =
 * Fixed bug with "session already sent".
 * Fixed the bug where IE didn't recognize the path to the video chat and couldn't log in.
 * Updated the documentation.
