@@ -1,13 +1,12 @@
 <?php
 if(session_id() == ""){
-		session_start();
-	}
+	session_start();
+}
 
 $movie_param = "index.swf";
 if(isset($_GET['movie_param'])){
 	$movie_param = $_GET['movie_param'];
 }
-
 
 echo '
 <script type="text/javascript" src="facebook_integration.js"></script>
@@ -32,8 +31,8 @@ echo '
 	};
 </script>
 <script type="text/javascript">
-swfobject.embedSWF("'.$movie_param.'", "myContent", "100%", "600", "10.3.0", "", flashvars, params, attributes);</script>
-	  
+swfobject.embedSWF("'.$movie_param.'", "myContent", "100%", "600", "10.3.0", "", flashvars, params, attributes);
+</script>	  
 <div id="myContent">
 	<div id="av_message" style="color:#ff0000"> </div>
 </div>
