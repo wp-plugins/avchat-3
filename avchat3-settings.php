@@ -128,7 +128,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 ?>
 
 <div class="wrap">
-	<h2>AVChat3 Settings & Permissions</h2>
+	<h2>AVChat 3 Settings & Permissions</h2>
 </div>
 <form name="form1" method="post" action="<?php echo $location; ?>">
 	<table style="text-align:center">
