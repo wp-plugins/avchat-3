@@ -329,7 +329,7 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//Allow chat access to unregistered users but with predefined username
 	//--------------------------------------------------------------------	
 	$avconfig['username'] = 'user_'.rand(0,999);
-	$avconfig['changeuser'] = 1;
+	$avconfig['changeuser'] = 0;
 	
 	//----------------------------------------------------
 	//Deny access to chat admin to unauthorized users 
