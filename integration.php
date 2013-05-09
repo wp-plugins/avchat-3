@@ -310,7 +310,7 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//Deny access to chat admin to unauthorized users 
 	//----------------------------------------------------
 	if(isset($_GET['admin']) && $_GET['admin'] == 'true'){
-		if($_SESSION['user_role'] != "administrator" && !$_SESSION['can_access_admin_chat']){
+		if(!$_SESSION['can_access_admin_chat']){
 			if($role != "visitors"){
 				$avconfig['showUserLevelError'] = 1;
 			}
@@ -343,8 +343,7 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 			$avconfig['showLoginError'] = 1;
 		}
 		return 0;
-	}*/
-	
+	}*/	
 }
 
 ?>
