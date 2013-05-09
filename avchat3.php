@@ -10,7 +10,7 @@ if(session_id() == ""){
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/avchat-3/
-Description: This plugin integrates AVChat 3 into any WordPress website.
+Description: This plugin integrates <a href="http://avchat.net/">AVChat 3</a> into any WordPress website.
 Author: AVChat Software
 Version: 1.3.3
 Author URI: http://avchat.net/
@@ -86,8 +86,8 @@ function avchat3_install(){
 				FB_appId TEXT NOT NULL
 				);
 			";		
-   		//require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-      	//dbDelta($sql);
+   		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+      	dbDelta($sql);
       	
       	foreach($wp_roles->roles as $role => $details){
 			$user_roles[$role] = $details["name"];
