@@ -326,14 +326,15 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 }else
 {
 	//--------------------------------------------------------------------
-	//Allow chat access to unregistered users but with predefined username
+	//Generate predefined usernames for visitors, set $avconfig['changeuser']=0; to prevent them from chaingin their allocated usernames
 	//--------------------------------------------------------------------	
-	$avconfig['username'] = 'user_'.rand(0,999);
-	$avconfig['changeuser'] = 0;
+	$avconfig['username'] = 'visitor_'.rand(0,999);
+	$avconfig['changeuser'] = 1;
 	
 	//----------------------------------------------------
-	//Deny access to chat admin to unauthorized users 
+	//Security feature: deny access to the chat admin aera (admin.swf) to visitors
 	//----------------------------------------------------
+	/*
 	if(isset($_GET['admin']) && $_GET['admin'] == 'true'){
 		if($role != "visitors"){
 			$avconfig['showUserLevelError'] = 1;
@@ -342,7 +343,7 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 			$avconfig['showLoginError'] = 1;
 		}
 		return 0;
-	}
+	}*/
 	
 }
 
