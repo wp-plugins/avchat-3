@@ -73,7 +73,6 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 			}
 		}
 		
-		//var_dump($_POST);
 		
 		
 		foreach ($avconf_arr as $key=>$vals){
@@ -94,7 +93,6 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 			
 			
 			$query = "UPDATE ".$table_permissions." SET ".$updateString." WHERE user_role = '".$key."'";
-			//var_dump($query);
 			$wpdb->query($query);
 		}
 		
@@ -122,6 +120,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 	//unset($user_roles['administrator']);
 	
 	$user_roles['visitors'] = "Visitors";
+	
 	
 	//var_dump($user_roles);
 	
