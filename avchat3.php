@@ -10,7 +10,7 @@ if(session_id() == ""){
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/avchat-3/
-Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating keep in mind that the AVChat 3 files will be removed and all the permissions reset.
+Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating keep in mind that the AVChat 3 files will be removed and all the permissions and settings reset.
 Author: AVChat Software
 Version: 1.3.3
 Author URI: http://avchat.net/
@@ -348,7 +348,7 @@ function avchat3_get_user_chat($content){
 }
 
 function avchat3_admin_config(){
-	add_options_page('AVChat 3 Permissions & Config', 'AVChat 3',  'manage_options', 'avchat-3/avchat3-settings.php');
+	add_options_page('AVChat 3 Permissions & Config', 'AVChat 3 Video Chat',  'manage_options', 'avchat-3/avchat3-settings.php');
 }
 
 register_activation_hook(__FILE__,'avchat3_install');
