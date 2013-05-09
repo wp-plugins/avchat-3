@@ -260,7 +260,7 @@ function avchat3_get_user_chat($content){
 		avchat3_set_avchat3_general_settings_on_session();
 		
 		
-		if($user_info['user_role'] == 'administrator' || $user_info['can_access_admin_chat']){
+		if($user_info['can_access_admin_chat']){
 			$movie_param = 'admin.swf';
 			
 		}else{
