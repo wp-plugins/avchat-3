@@ -119,7 +119,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 		$user_roles[$role] = $details["name"];
 	}
 	
-	unset($user_roles['administrator']);
+	//unset($user_roles['administrator']);
 	
 	$user_roles['visitors'] = "Visitors";
 	
