@@ -27,7 +27,7 @@ You should have received a copy of the GNU General Public License
 along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
+//this function is called when you press Activate
 function avchat3_install(){
    global $wpdb;
    global $wp_roles;
