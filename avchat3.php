@@ -102,9 +102,13 @@ function avchat3_install(){
 		//$user_roles['networkuser'] = "Network user";
 	    
 		foreach($user_roles as $key=>$value){
+			$canAccessAdmin=0;
+			if ($key=="administrator"){
+				$canAccessAdmin=1;
+			}
 			$insert = "INSERT INTO " . $table_name .
 	            	  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled, free_video_time, drop_in_room, max_streams, max_rooms) " .
-	                  "VALUES ('" . $key . "','1','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
+	                  "VALUES ('" . $key . "','$canAccessAdmin','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
 			 $results = $wpdb->query( $insert );
 		}
 		
