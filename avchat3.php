@@ -35,7 +35,13 @@ function avchat3_install(){
    $table_name = $wpdb->prefix . "avchat3_permissions";
    $table2_name = $wpdb->prefix . "avchat3_general_settings";
    
+   //we remove the tables if they exist
+   $sql = "DROP TABLE  $table_name";
+   $results = $wpdb->query( $sql );
+   $sql = "DROP TABLE  $table2_name";
+   $results = $wpdb->query( $sql );
    
+   //we add new tables
    if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name && $wpdb->get_var("SHOW TABLES LIKE '$table2_name'") != $table2_name) {
    		$sql = "CREATE TABLE " . $table_name . " (
 			  id mediumint(9) NOT NULL AUTO_INCREMENT,
@@ -80,8 +86,8 @@ function avchat3_install(){
 				FB_appId TEXT NOT NULL
 				);
 			";		
-   		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-      	dbDelta($sql);
+   		//require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+      	//dbDelta($sql);
       	
       	foreach($wp_roles->roles as $role => $details){
 			$user_roles[$role] = $details["name"];
