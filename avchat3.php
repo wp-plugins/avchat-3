@@ -345,7 +345,7 @@ print_r($_SESSION['can_access_chat']);
 }
 
 function avchat3_admin_config(){
-	add_options_page('AVChat 3 Permissions & Config', 'AVChat3',  'manage_options', 'avchat-3/avchat3-settings.php');
+	add_options_page('AVChat 3 Permissions & Config', 'AVChat 3',  'manage_options', 'avchat-3/avchat3-settings.php');
 }
 
 register_activation_hook(__FILE__,'avchat3_install');
