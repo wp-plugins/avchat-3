@@ -87,9 +87,13 @@ function avchat3_install(){
 			$user_roles[$role] = $details["name"];
 		}
 		
-		unset($user_roles['administrator']);
+		//unset($user_roles['administrator']);
 		
+		//we add these 2 roles to the array so that default values are also inserted for them
 		$user_roles['visitors'] = "Visitors";
+		
+		//Network users are users that have signed up on the main site of a Multisite enabled WP instalation, they have no role on the main site but are admin in their own websites (part of the WP Multisite network)
+		//$user_roles['networkuser'] = "Network user";
 	    
 		foreach($user_roles as $key=>$value){
 			$insert = "INSERT INTO " . $table_name .
@@ -281,53 +285,61 @@ function avchat3_get_user_chat($content){
 			$FB_appId = "447812388589757";
 		}
 		
-			
-		if($display_mode == 'embed'){
-		$embed = '
-			<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
+		$AVChat_exists = "false";
+		if(file_exists('./wp-content/plugins/avchat-3/swfobject.js')){
+			$AVChat_exists = "true";
+		}
+		
+		$role = $_SESSION['user_role'];
+
+print_r($_SESSION['can_access_chat']);		
+		if($_SESSION['can_access_chat'] != '1'){
+				$embed = '<div id="av_message" style="color:#ff0000"> You do not have sufficient privileges to access this page. <a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="wp-login.php" >Click to upgrade!</a></div>';	
+		}else{
+			$embed = '<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
+			<input type="hidden" name="AVChat_exists" id="AVChat_exists" value="'.$AVChat_exists.'" />
+			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/tinycon.min.js"></script>
 			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/facebook_integration.js"></script>
 			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/swfobject.js"></script>
-			<script type="text/javascript">
-				var flashvars = {
-					lstext : "Loading Settings...",
-					sscode : "php",
-					userId : ""
-				};
-				var params = {
-					quality : "high",
-					bgcolor : "#272727",
-					play : "true",
-					loop : "false",
-					allowFullScreen : "true",
-					base : "'.get_bloginfo("url").'/wp-content/plugins/avchat-3/"
-				};
-				var attributes = {
-					name : "index_embed",
-					id :   "index_embed",
-					align : "middle"
-				};
-			</script>
-			<script type="text/javascript">
-			swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "10.3.0", "", flashvars, params, attributes);</script>
-			<!-- This script changes the window title when a user receives a new message in chat -->
-			<script type="text/javascript">
-				function onNewMessageReceived(message){
-					document.title = "("+message+") AVChat 3.0 User Interface";
+			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/new_message.js"></script>
+			<script type="text/javascript">var plugin_path = "'.get_bloginfo('url').'/wp-content/plugins/avchat-3/"; var embed = "'.$display_mode.'";</script>
+			<div id="myContent"><div id="av_message" style="color:#ff0000"> </div></div>';
+			if($display_mode == 'embed'){
+				$embed = $embed.'
+				<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
+				<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/facebook_integration.js"></script>
+				<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/swfobject.js"></script>
+				<script type="text/javascript">
+					var flashvars = {
+						lstext : "Loading Settings...",
+						sscode : "php",
+						userId : ""
+					};
+					var params = {
+						quality : "high",
+						bgcolor : "#272727",
+						play : "true",
+						loop : "false",
+						allowFullScreen : "true",
+						base : "'.get_bloginfo("url").'/wp-content/plugins/avchat-3/"
+					};
+					var attributes = {
+						name : "index_embed",
+						id :   "index_embed",
+						align : "middle"
+					};
+				</script><script type="text/javascript">
+				swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "11.1.0", "", flashvars, params, attributes);</script>';
+			}else{
+				$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat-3/index_popup.php?movie_param='.$movie_param.'&#39;';
+				$page_content = "";
+				if($AVChat_exists == "true" ){
+					$page_content = '<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.$chat_window.')">Open chat in popup</a>';
+				
 				}
-				function onNewMessageRead(){
-					document.title = "AVChat 3.0 User Interface";
-				}
-			</script>
-				  
-			<div id="myContent">
-				<div id="av_message" style="color:#ff0000"> </div>
-			</div>
-			<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/find_player.js"></script>';
-		}else{
-			$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat-3/index_popup.php?movie_param='.$movie_param.'&#39;';
-  			$page_content = '<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.$chat_window.')">Open chat in popup</a>';
-			
-			$embed = $page_content;
+				$embed =  $embed.$page_content;
+			}
+			$embed = $embed.'<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3-pro/find_player.js"></script>';
 		}
 		return str_replace('[chat]', $embed, $content);
 }
