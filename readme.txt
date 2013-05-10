@@ -98,7 +98,7 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 
 == Changelog ==
 
-= 1.4.0 = (10.05.2013)
+= 1.4.0 (10.05.2013) =
 * Updated plugin description in WP Plugins backend area
 * Added FP 11.1 requirement to match the FP requirement in the recent 2330 AVChat 3 build: http://avchathq.com/blog/avchat-build-2330-introduces-h-264-support/
 * Better detection for missing JavaScript and Flash Player version
