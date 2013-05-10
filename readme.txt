@@ -1,9 +1,9 @@
 === Video Chat Plugin ===
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat
 Requires at least: 3.0.0
-Tested up to: 3.5
-Stable tag: 1.3.3
-Version : 1.3.3
+Tested up to: 3.5.1
+Stable tag: 1.4
+Version : 1.4
 Contributors: stefan.avchat
 License: GPLv2 or later
 
@@ -26,9 +26,9 @@ If you have AVChat than this Standard version of the plugin will take care of :
 The above features are for the Standard version which you can use to see the potential of the video chat solution on your site. You can download it for Free from this page.
 
 > #### Get your  <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>PRO version </a>  now !!! .  
-> Offering more advanced features, additional settings and permissions, free installation and 1 year of support and updates, the <a href='http://avchat.net/integrations/wordpress' title='AVChat Video Chat plugin for WordPress'>AVChat Video Chat plugin PRO</a> is the ultimate sollution for a perfect WordPress video chat. 
+> Offering more advanced features, multisite support, additional settings and permissions, free installation and 1 year of support and updates, the <a href='http://avchat.net/integrations/wordpress' title='AVChat Video Chat plugin for WordPress'>AVChat Video Chat plugin PRO</a> is the ultimate sollution for a perfect WordPress video chat. 
 
-With the PRO version you get more than 20 new configuration options and permissions that you can customize for each user role. Also you get free installation and 1 year of full support and updates. And of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into development.
+With the PRO version you get more than 28 new configuration options and permissions that you can customize for each user role. Also you get free installation and 1 year of full support and updates. And of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into development.
 
 The AVChat Video Chat plugin for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
@@ -93,6 +93,22 @@ We also have a support forum: http://avchat.net/forum that is very useful in obt
 7. PRO vs Standard
 
 == Changelog ==
+
+= 1.4 = (10.05.2013)
+* Updated plugin description in WP Plugins backend area
+* Added FP 11.1 requirement to match the FP requirement in the recent 2330 AVChat 3 build: http://avchathq.com/blog/avchat-build-2330-introduces-h-264-support/
+* Better detection for missing JavaScript and Flash Player version
+* Better AVChat 3 files detection
+* Better mobile device detection
+* FB application ID is now sent to AVChat 3 even when the plugin is configured to open AVChat 3 in a pop-up
+* Removed default FB app id
+* Better JS code for opening up AVChat 3 in an pop-up window
+* WP Administrators are now granted access by default, through a pre-checked permission, to the admin area of AVChat 3 (admin.swf) 
+* Fixed issue that made it impossible to deny WP Administrators access to the admin area of AVChat 3 (admin.swf)
+* Fixed issue that prevented the permissions from being applied to WP Administrators
+* Default visitors usernames will now have the "visitor_" prefix instead of the "user_" prefix
+* The admin column was not present in the AVChat 3 Settings & Permissions page
+* Better explanation of AVChat 3 permissions and options in the AVChat 3 Settings & Permissions page
 
 = 1.3.3 (11.04.2013) =
 * fixed some minor typos including removing the "PRO" from the plugin name as it shows up in the WP backend
