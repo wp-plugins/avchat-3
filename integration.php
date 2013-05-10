@@ -1,6 +1,6 @@
 <?php
 /*
-Copyright (C) 2009-2012 AVChat Software, avchat.net
+Copyright (C) 2009-2013 AVChat Software, avchat.net
 
 This WordPress Plugin is distributed under the terms of the GNU General Public License.
 You can redistribute it and/or modify it under the terms of the GNU General Public License 
