@@ -10,7 +10,7 @@ if(session_id() == ""){
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/avchat-3/
-Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating keep in mind that the AVChat 3 files will be removed and all the permissions and settings reset.
+Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating keep in mind that the AVChat 3 files will be removed.
 Author: AVChat Software
 Version: 1.3.3
 Author URI: http://avchat.net/
@@ -41,55 +41,60 @@ function avchat3_install(){
    $sql = "DROP TABLE  $table2_name";
    $results = $wpdb->query( $sql );
    
-   //we add new tables
-   if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name && $wpdb->get_var("SHOW TABLES LIKE '$table2_name'") != $table2_name) {
-   		$sql = "CREATE TABLE " . $table_name . " (
-			  id mediumint(9) NOT NULL AUTO_INCREMENT,
-			  user_role varchar(50) DEFAULT '0' NOT NULL,
-			  can_access_chat tinyint(1) NOT NULL,
-			  can_access_admin_chat tinyint(1) NOT NULL,
-			  can_publish_audio_video tinyint(1) NOT NULL,
-			  can_stream_private tinyint(1) NOT NULL,
-			  can_send_files_to_rooms tinyint(1) NOT NULL,
-			  can_send_files_to_users tinyint(1) NOT NULL,
-			  can_pm tinyint(1) NOT NULL,
-			  can_create_rooms tinyint(1) NOT NULL,
-			  can_watch_other_people_streams tinyint(1) NOT NULL,
-			  can_join_other_rooms tinyint(1) NOT NULL,
-			  show_users_online_stay tinyint(1) NOT NULL,
-			  view_who_is_watching_me tinyint(1) NOT NULL,
-			  can_block_other_users tinyint(1) NOT NULL,
-			  can_buzz tinyint(1) NOT NULL,
-			  can_stop_viewer tinyint(1) NOT NULL,
-			  can_ignore_pm tinyint(1) NOT NULL,
-			  typing_enabled tinyint(1) NOT NULL,
-			  free_video_time mediumint(5) NOT NULL,
-			  drop_in_room varchar(5) NOT NULL,
-			  max_streams mediumint(2) NOT NULL,
-			  max_rooms mediumint(2) NOT NULL,
-			  username_prefix varchar(10) NOT NULL,
-			  UNIQUE KEY id (id)
+    //keep in mind if the tables were present\
+	$tables_were_present=true;
+    if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name && $wpdb->get_var("SHOW TABLES LIKE '$table2_name'") != $table2_name) {
+		$tables_were_present=false;
+	}
+	
+	$sql = "CREATE TABLE " . $table_name . " (
+		  id mediumint(9) NOT NULL AUTO_INCREMENT,
+		  user_role varchar(50) DEFAULT '0' NOT NULL,
+		  can_access_chat tinyint(1) NOT NULL,
+		  can_access_admin_chat tinyint(1) NOT NULL,
+		  can_publish_audio_video tinyint(1) NOT NULL,
+		  can_stream_private tinyint(1) NOT NULL,
+		  can_send_files_to_rooms tinyint(1) NOT NULL,
+		  can_send_files_to_users tinyint(1) NOT NULL,
+		  can_pm tinyint(1) NOT NULL,
+		  can_create_rooms tinyint(1) NOT NULL,
+		  can_watch_other_people_streams tinyint(1) NOT NULL,
+		  can_join_other_rooms tinyint(1) NOT NULL,
+		  show_users_online_stay tinyint(1) NOT NULL,
+		  view_who_is_watching_me tinyint(1) NOT NULL,
+		  can_block_other_users tinyint(1) NOT NULL,
+		  can_buzz tinyint(1) NOT NULL,
+		  can_stop_viewer tinyint(1) NOT NULL,
+		  can_ignore_pm tinyint(1) NOT NULL,
+		  typing_enabled tinyint(1) NOT NULL,
+		  free_video_time mediumint(5) NOT NULL,
+		  drop_in_room varchar(5) NOT NULL,
+		  max_streams mediumint(2) NOT NULL,
+		  max_rooms mediumint(2) NOT NULL,
+		  username_prefix varchar(10) NOT NULL,
+		  UNIQUE KEY id (id)
+		);
+			CREATE TABLE " . $table2_name . " (
+			connection_string TEXT NOT NULL,
+			invite_link TEXT NOT NULL,
+			disconnect_link TEXT NOT NULL,
+			login_page_url TEXT NOT NULL,
+			register_page_url TEXT NOT NULL,
+			text_char_limit mediumint(2) NOT NULL,
+			history_lenght mediumint(3) NOT NULL,
+			hide_left_side ENUM ('yes', 'no') NOT NULL,
+			p2t_default ENUM ('yes', 'no') NOT NULL,
+			flip_tab_menu ENUM ('top', 'bottom') NOT NULL,
+			display_mode ENUM ('embed', 'popup') NOT NULL,
+			allow_facebook_login ENUM ('yes', 'no') NOT NULL,
+			FB_appId TEXT NOT NULL
 			);
-				CREATE TABLE " . $table2_name . " (
-				connection_string TEXT NOT NULL,
-				invite_link TEXT NOT NULL,
-				disconnect_link TEXT NOT NULL,
-				login_page_url TEXT NOT NULL,
-				register_page_url TEXT NOT NULL,
-				text_char_limit mediumint(2) NOT NULL,
-				history_lenght mediumint(3) NOT NULL,
-				hide_left_side ENUM ('yes', 'no') NOT NULL,
-				p2t_default ENUM ('yes', 'no') NOT NULL,
-				flip_tab_menu ENUM ('top', 'bottom') NOT NULL,
-				display_mode ENUM ('embed', 'popup') NOT NULL,
-				allow_facebook_login ENUM ('yes', 'no') NOT NULL,
-				FB_appId TEXT NOT NULL
-				);
-			";		
-   		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-      	dbDelta($sql);
+		";		
+   	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
       	
-      	foreach($wp_roles->roles as $role => $details){
+	if (!$tables_were_present){
+		foreach($wp_roles->roles as $role => $details){
 			$user_roles[$role] = $details["name"];
 		}
 		
@@ -100,23 +105,23 @@ function avchat3_install(){
 		
 		//Network users are users that have signed up on the main site of a Multisite enabled WP instalation, they have no role on the main site but are admin in their own websites (part of the WP Multisite network)
 		//$user_roles['networkuser'] = "Network user";
-	    
+		
 		foreach($user_roles as $key=>$value){
 			$canAccessAdmin=0;
 			if ($key=="administrator"){
 				$canAccessAdmin=1;
 			}
 			$insert = "INSERT INTO " . $table_name .
-	            	  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled, free_video_time, drop_in_room, max_streams, max_rooms) " .
-	                  "VALUES ('" . $key . "','$canAccessAdmin','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
+					  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled, free_video_time, drop_in_room, max_streams, max_rooms) " .
+					  "VALUES ('" . $key . "','$canAccessAdmin','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
 			 $results = $wpdb->query( $insert );
 		}
 		
 		$insert = "INSERT INTO " . $table2_name .
-	            	  " (connection_string, invite_link, disconnect_link, login_page_url, register_page_url, text_char_limit, history_lenght, hide_left_side, p2t_default, flip_tab_menu, display_mode, allow_facebook_login, FB_appId) " .
-	                  "VALUES ('rtmp://','','/','/', '/', '200', '20', 'no', 'yes', 'top', 'embed', 'yes', '')";
+					  " (connection_string, invite_link, disconnect_link, login_page_url, register_page_url, text_char_limit, history_lenght, hide_left_side, p2t_default, flip_tab_menu, display_mode, allow_facebook_login, FB_appId) " .
+					  "VALUES ('rtmp://','','/','/', '/', '200', '20', 'no', 'yes', 'top', 'embed', 'yes', '')";
 		$results = $wpdb->query( $insert );
-   }	
+	}	
 }
 
 
