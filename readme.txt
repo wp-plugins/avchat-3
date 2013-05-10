@@ -11,6 +11,10 @@ The AVChat Video Chat Plugin for WordPress is designed to increase members engag
 
 == Description ==
 
+> #### 05 March Update !!! The HTML5 version is now compatible with the Red5 media server!
+> #### 21 December Update! Now you can chat from your tablets or mobile phones with the HTML5 version of AVChat 3. You can benefit form the mobile version if you have <a href='https://www.adobe.com/cfusion/tdrc/index.cfm?product=adobemediaserver'>Adobe Media Server (ex FMS)</a>.
+
+
 The Video Chat Plugin for WordPress handles the integration between AVChat and your WordPress website.
 
 <a href='http://avchat.net/features' title='AVChat software'>AVChat</a> is an highly appreciated video chat script that can be hosted by you and installed on your website. You can find out <a href='http://avchat.net/features' title='AVChat software'>more about it</a> and purchase it from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>.
