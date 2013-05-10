@@ -263,6 +263,7 @@ function avchat3_get_user_chat($content){
 		avchat3_set_user_details_on_session($user_info);
 		avchat3_set_avchat3_general_settings_on_session();
 		
+		require_once(ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php');
 		
 		if($user_info['can_access_admin_chat']){
 			$movie_param = 'admin.swf';
@@ -292,14 +293,10 @@ function avchat3_get_user_chat($content){
 			$FB_appId = $_SESSION['FB_appId'];
 		}
 		else {
-			$FB_appId = "447812388589757";
+			$FB_appId = "";
 		}
 		
-
-		
-		
 		$role = $_SESSION['user_role'];
-
 		if($_SESSION['can_access_chat'] != '1'){
 				$embed = '<div id="av_message" style="color:#ff0000"> You do not have sufficient privileges to access this page. <a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="wp-login.php" >Click to upgrade!</a></div>';	
 		}else{
@@ -307,44 +304,51 @@ function avchat3_get_user_chat($content){
 				//the AVChat 3 files have not been copied to the installation folder
 				$embed = '<p>Before the chat can work, you need to copy the <b>AVChat 3</b> files to the <b>/wp-content/plugins/avchat-3/</b> folder.</p><p>To get <b>AVChat 3</b> you can request a 15 day trial from <a href="http://avchat.net">http://avchat.net</a> or you can purchase it from <a href="http://avchat.net/buy-now">http://avchat.net/buy-now</a>.</p>';
 			}else{
-				if($display_mode == 'embed'){
-					$embed = '
-					<div id="myContent"><div id="av_message" style="color:#ff0000"></div></div>
-					<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
-					<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/tinycon.min.js"></script>
-					<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/facebook_integration.js"></script>
-					<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/swfobject.js"></script>
-					<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/new_message.js"></script>
-					<script type="text/javascript">
-					var plugin_path = "'.get_bloginfo('url').'/wp-content/plugins/avchat-3/"; var embed = "'.$display_mode.'";
-					</script>
-					<script type="text/javascript">
-						var flashvars = {
-							lstext : "Loading Settings...",
-							sscode : "php",
-							userId : ""
-						};
-						var params = {
-							quality : "high",
-							bgcolor : "#272727",
-							play : "true",
-							loop : "false",
-							allowFullScreen : "true",
-							base : "'.get_bloginfo("url").'/wp-content/plugins/avchat-3/"
-						};
-						var attributes = {
-							name : "index_embed",
-							id :   "index_embed",
-							align : "middle"
-						};
-					</script>
-					<script type="text/javascript">
-					swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "11.1.0", "", flashvars, params, attributes);
-					</script>';
-					$embed = $embed.'<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3-pro/find_player.js"></script>';
+				$mobilecheck= new Mobile_Detect();
+				if ($mobilecheck->isMobile()){
+					$embed = '<a href="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/m/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
 				}else{
-					$chat_window = '&#39;'.get_bloginfo('url').'/wp-content/plugins/avchat-3/index_popup.php?movie_param='.$movie_param.'&#39;';
-					$embed = '<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.$chat_window.')">Open chat in popup</a>';
+					if($display_mode == 'embed'){
+						$embed = '
+						<div id="myContent"><div id="av_message" style="color:#ff0000">You need to have JavaScript enabled and <a target="_blank" href="http://get2.adobe.com/flashplayer/">the latest version of Flash Player</a> for the chat to work.</div></div>
+						<input type="hidden" name="FB_appId" id="FB_appId" value="'.$FB_appId.'" />
+						<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/tinycon.min.js"></script>
+						<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/facebook_integration.js"></script>
+						<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/swfobject.js"></script>
+						<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/new_message.js"></script>
+						<script type="text/javascript">
+						var plugin_path = "'.get_bloginfo('url').'/wp-content/plugins/avchat-3/"; var embed = "'.$display_mode.'";
+						</script>
+						<script type="text/javascript">
+							var flashvars = {
+								lstext : "Loading Settings...",
+								sscode : "php",
+								userId : ""
+							};
+							var params = {
+								quality : "high",
+								bgcolor : "#272727",
+								play : "true",
+								loop : "false",
+								allowFullScreen : "true",
+								base : "'.get_bloginfo("url").'/wp-content/plugins/avchat-3/"
+							};
+							var attributes = {
+								name : "index_embed",
+								id :   "index_embed",
+								align : "middle"
+							};
+						</script>
+						<script type="text/javascript">
+						swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "11.1.0", "", flashvars, params, attributes);
+						</script>';
+						$embed = $embed.'<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/find_player.js"></script>';
+					}else{
+						$chat_window_url = get_bloginfo('url').'/wp-content/plugins/avchat-3/index_popup.php?movie_param='.$movie_param."&FB_appId=".FB_appId;
+						$chat_window_height = 600; 
+						$chat_window_width = 800;
+						$embed ='<a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="#" onclick="javascript:window.open('.'&#39;'.$chat_window_url.'&#39;'.',\'_blank\',\'width='.$chat_window_width.',height='.$chat_window_height.'\')">Open chat in popup</a>';
+					}
 				}
 			}
 		}
@@ -359,5 +363,4 @@ register_activation_hook(__FILE__,'avchat3_install');
 add_action('wp_logout', 'avchat3_clear_session');
 add_action('admin_menu', 'avchat3_admin_config');
 add_filter('the_content', 'avchat3_get_user_chat', 7);
-
 ?>
