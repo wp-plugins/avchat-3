@@ -1,12 +1,10 @@
+<?php if(session_id() == ""){ 	session_start(); } ?>
 <html>
 <head>
 <title>Video Chat</title>
 </head>
 <body style="padding:0px;margin:0px">
 <?php
-if(session_id() == ""){
-	session_start();
-}
 $movie_param = "index.swf";
 if(isset($_GET['movie_param'])){
 	$movie_param = $_GET['movie_param'];
