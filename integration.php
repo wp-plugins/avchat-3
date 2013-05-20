@@ -85,7 +85,7 @@ $role = $_SESSION['user_role'];
 
 
 
-if($role != "administrator"){		
+//if($role != "administrator"){		
 	//----------------------------------------------------
 	//Config settings & permission for non administrators
 	//----------------------------------------------------
@@ -273,22 +273,22 @@ if($role != "administrator"){
 		
 		
 	}
-}else{
+//}else{
 	//------------------------------------------
 	//Give maximum permissions to administrators
 	//------------------------------------------
 	
-	$avconfig['freeVideoTime'] = -1;
-	$avconfig['maxStreams']=99;
-	$avconfig["maxRoomsOneCanBeIn"]=99;
-}
+	//$avconfig['freeVideoTime'] = -1;
+	//$avconfig['maxStreams']=99;
+	//$avconfig["maxRoomsOneCanBeIn"]=99;
+//}
 
 if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 	//-----------------------------------------
 	//Config username
 	//-----------------------------------------
 	$avconfig['username'] = $_SESSION['user_login'];
-	//$avconfig['changeuser'] = 1;
+	$avconfig['changeuser'] = 0;
 	//-----------------------------------------
 	//Get user role
 	//-----------------------------------------
@@ -326,10 +326,10 @@ if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']){
 }else
 {
 	//--------------------------------------------------------------------
-	//Generate predefined usernames for visitors, set $avconfig['changeuser']=0; to prevent them from chaingin their allocated usernames
+	//Generate predefined usernames for visitors, set $avconfig['changeuser']=1; to allow them to change their username
 	//--------------------------------------------------------------------	
 	$avconfig['username'] = 'visitor_'.rand(0,999);
-	$avconfig['changeuser'] = 1;
+	$avconfig['changeuser'] = 0;
 	
 	//----------------------------------------------------
 	//Security feature: deny access to the chat admin aera (admin.swf) to visitors
