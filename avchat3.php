@@ -310,7 +310,7 @@ function avchat3_get_user_chat($content){
 				$embed = '<p>Before the chat can work, you need to copy the <b>AVChat 3</b> files to the <b>/wp-content/plugins/avchat-3/</b> folder.</p><p>To get <b>AVChat 3</b> you can request a 15 day trial from <a href="http://avchat.net">http://avchat.net</a> or you can purchase it from <a href="http://avchat.net/buy-now">http://avchat.net/buy-now</a>.</p>';
 			}else{
 				$mobilecheck= new Mobile_Detect();
-				if ($mobilecheck->isMobile()){
+				if ($mobilecheck->isMobile() || $mobilecheck->isMobile()){
 					$embed = '<a href="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/m/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
 				}else{
 					if($display_mode == 'embed'){
