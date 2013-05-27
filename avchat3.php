@@ -268,7 +268,7 @@ function avchat3_get_user_chat($content){
 		avchat3_set_user_details_on_session($user_info);
 		avchat3_set_avchat3_general_settings_on_session();
 		
-		require_once(ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php');
+		
 		
 		if($user_info['can_access_admin_chat']){
 			$movie_param = 'admin.swf';
@@ -309,6 +309,7 @@ function avchat3_get_user_chat($content){
 				//the AVChat 3 files have not been copied to the installation folder
 				$embed = '<p>Before the chat can work, you need to copy the <b>AVChat 3</b> files to the <b>/wp-content/plugins/avchat-3/</b> folder.</p><p>To get <b>AVChat 3</b> you can request a 15 day trial from <a href="http://avchat.net">http://avchat.net</a> or you can purchase it from <a href="http://avchat.net/buy-now">http://avchat.net/buy-now</a>.</p>';
 			}else{
+				require_once(ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php');
 				$mobilecheck= new Mobile_Detect();
 				if ($mobilecheck->isMobile() || $mobilecheck->isMobile()){
 					$embed = '<a href="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/m/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
