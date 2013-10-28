@@ -43,21 +43,21 @@ Mike Johnsen.
 == Installation ==
 These instructions cover installing the Standard version of the plugin (available on this page on wordpress.org/plugins). The installation instructions for the PRO version are at http://avchat.net/support/documentation/wordpress together with more documentation.
 
-For this plugin to work, *you first need to purchase (or get a 15 days trial) the AVChat 3 Video Chat software * from <a href='http://avchat.net' title='Purchase AVChat Video Chat Software'>here</a>. This plugin only takes care of the integration between WordPress and the AVChat 3 software. It does not contain the actual AVChat 3 software.
+For this plugin to work, **you first need to purchase (or get a 15 days trial) the AVChat 3 Video Chat software ** from <a href='http://avchat.net' title='Purchase AVChat Video Chat Software'>here</a>. This plugin only takes care of the integration between WordPress and the AVChat 3 software. It does not contain the actual AVChat 3 software.
 
 Once you purchase or get a trial of AVChat 3 from the http://avchat.net website, follow these steps :
 
 0. Download the plugin archive (avchat-3.1.4.0.zip) from this page.
-1. Upload the *avchat-3* folder (from the avchat-3.1.4.0.zip archive) to your */wp-content/plugins* folder.
+1. Upload the **avchat-3** folder (from the avchat-3.1.4.0.zip archive) to your **/wp-content/plugins** folder.
 2. Download the AVChat archive (AVChat 3.0 Build XXXX.zip) from the link sent by avchat.net.
-3. Extract the archive and upload the contents of the *Files to upload to your web site* to your new */wp-content/plugins/avchat-3/* folder.
-4. Go to the WordPress admin area - > Plugins page and activate the *AVChat Video Chat Plugin for WordPress* plugin.
-5. Go to the WordPress admin area -> Settings -> AVChat 3 and  set the *Connection string* to: *rtmp://myFMSserver.com/avchat30/_definst_* where myFMSserver.com is the domain name or ip of the dedicated/VPS server where your media server is installed.
-6. Set up the *avchat30* app on your media server. Details at http://avchat.net/support/documentation/wordpress#111 .
-7. Create a new page on your WordPress website with this content: *[chat]*.
+3. Extract the archive and upload the contents of the **Files to upload to your web site** to your new **/wp-content/plugins/avchat-3/** folder.
+4. Go to the WordPress admin area - > Plugins page and activate the **AVChat Video Chat Plugin for WordPress** plugin.
+5. Go to the WordPress admin area -> Settings -> AVChat 3 and  set the **Connection string** to: **rtmp://my-media-server.com/avchat30/_definst_** where my-media-server.com is the domain name or ip of the dedicated/VPS server where your media server is installed.
+6. Set up the **avchat30** app on your media server. Details at http://avchat.net/support/documentation/wordpress#111 .
+7. Create a new page on your WordPress website with this content: **[chat]**.
 8. Go to that page and enter the video chat. You will be asked for the license key (it's in your private client/trial area on nusofthq.com).
 
-Get *FREE* installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat Plugin for WordPress'>PRO version </a> of the plugin, plus much more features that you can customize to make the chat the way you want it.
+Get **FREE** installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat Plugin for WordPress'>PRO version </a> of the plugin, plus much more features that you can customize to make the chat the way you want it.
 
 For further information, see <a href='http://avchat.net/support/documentation/wordpress' title='AVChat Plugin for WordPress Documentation'>our detailed WP documentation</a>.
 
