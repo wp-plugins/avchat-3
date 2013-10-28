@@ -47,8 +47,8 @@ For this plugin to work, **you first need to purchase (or get a 15 days trial) t
 
 Once you purchase or get a trial of AVChat 3 from the http://avchat.net website, follow these steps :
 
-0. Download the plugin archive (avchat-3.1.4.0.zip) from this page.
-1. Upload the **avchat-3** folder (from the avchat-3.1.4.0.zip archive) to your **/wp-content/plugins** folder.
+0. Download the plugin archive (avchat-3.1.4.1.zip) from this page.
+1. Upload the **avchat-3** folder (from the avchat-3.1.4.1.zip archive) to your **/wp-content/plugins** folder.
 2. Download the AVChat archive (AVChat 3.0 Build XXXX.zip) from the link sent by avchat.net.
 3. Extract the archive and upload the contents of the **Files to upload to your web site** to your new **/wp-content/plugins/avchat-3/** folder.
 4. Go to the WordPress admin area - > Plugins page and activate the **AVChat Video Chat Plugin for WordPress** plugin.
