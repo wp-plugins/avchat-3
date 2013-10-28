@@ -103,6 +103,13 @@ AVChat customers also receive dedicated tech support by email.
 
 == Changelog ==
 
+= 1.4.1 (28.10.2013) = 
+* Fixed issue with tablets not receiving the mobile version *
+* Fixed issue with permissions not loading correctly in some cases *
+* Fixed issue with "Headers already sent" error when using AVChat in pop up *
+* Visitors and logged in members can not change their chat username (visitors get a random visitor_XYZ username) *
+* Admins do not get 99 maxRoomsOneCanBeIn, 99 maxStreams and unlimited freeVideoTime anymore. All their abilities are controlled from the WP backend *
+
 = 1.4.0 (10.05.2013) = 
 * Updated plugin description in WP Plugins backend area
 * Added FP 11.1 requirement to match the FP requirement in the recent 2330 AVChat 3 build: http://avchathq.com/blog/avchat-build-2330-introduces-h-264-support/
