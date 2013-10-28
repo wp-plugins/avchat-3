@@ -4,7 +4,7 @@ Requires at least: 3.0.0
 Tested up to: 3.7
 Stable tag: 1.4.1
 Version : 1.4.1
-Contributors: stefan.avchat
+Contributors: stefan.avchat, naicuoctavian, radu.patron
 License: GPLv2 or later
 
 The AVChat Video Chat Plugin for WordPress is designed to increase members engagement and web site revenues with a stunning video chat solution.
