@@ -1,7 +1,7 @@
 === Video Chat Plugin ===
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat
 Requires at least: 3.0.0
-Tested up to: 3.6.1
+Tested up to: 3.7
 Stable tag: 1.4.0
 Version : 1.4.0
 Contributors: stefan.avchat
@@ -19,7 +19,7 @@ The Video Chat Plugin for WordPress handles the integration between AVChat and y
 
 <a href='http://avchat.net/features' title='AVChat software'>AVChat</a> is an highly appreciated video chat script that can be hosted by you and installed on your website. You can find out <a href='http://avchat.net/features' title='AVChat software'>more about it</a> and purchase it from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>.
 
-If you have AVChat than this Standard version of the plugin will take care of :
+If you have AVChat then this Standard version of the plugin will take care of :
 
 * username integration (users logged in the WordPress web site will not have to login again in the video chat )
 * setting up the most important permissions/limits/features for each user role from WordPress admin area
@@ -41,24 +41,23 @@ Mike Johnsen.
 
 
 == Installation ==
-For this plugin to work, ***you first need to purchase the AVChat 3 Video Chat software (or get a 15 days trial)*** from <a href='http://avchat.net' title='Purchase AVChat Video Chat Software'>here</a>. This plugin only takes care of the integration between WordPress and the AVChat 3 software. It does not contain the actual video chat software.
+These instructions cover installing the Standard version of the plugin (available on this page on wordpress.org/plugins). The installation instructions for the PRO version are at http://avchat.net/support/documentation/wordpress together with more documentation.
 
+For this plugin to work, *you first need to purchase (or get a 15 days trial) the AVChat 3 Video Chat software * from <a href='http://avchat.net' title='Purchase AVChat Video Chat Software'>here</a>. This plugin only takes care of the integration between WordPress and the AVChat 3 software. It does not contain the actual AVChat 3 software.
 
-After you obtain the "AVChat 3.0 Build XXXX.zip" archive from the http://avchat.net website, follow these steps :
+Once you purchase or get a trial of AVChat 3 from the http://avchat.net website, follow these steps :
 
-0. Download the avchat-3.1.4.0.zip archive from this page.
-1. Connect to your web site hosting account using FTP.
-2. Upload the "avchat-3" folder (from the avchat-3.1.4.0.zip archive) to your ***/wp-content/plugins/*** folder.
-3. Upload the contents of the "Files to upload to your web site" (from the "AVChat 3.0 Build XXXX.zip" archive) to your new ***/wp-content/plugins/avchat-3/*** folder.
-4. Chmod the ***/wp-content/plugins/avchat-3/uploadedFiles*** folder to 777 (otherwise the upload function might not work).
-5. Create a new folder named "tokens" (***/wp-content/plugins/avchat-3/tokens***) and CHMOD it to 777 (otherwise we might have token generation issues later on).
-6. Go to the WordPress admin area and activate the "AVChat Video Chat Plugin for WordPress" plugin from the Plugins page.
-7. Go to Settings -> AVChat 3 and  set the "Connection string" to: ***rtmp://myFMSserver.com/avchat30/_definst_*** where myFMSserver.com is the domain name or ip of the dedicated/VPS server where your media server is installed.
-8. Create a new page on your WordPress website with this content: ***[chat]***.
-9. Go to that page and enter the video chat. You will be asked for the license key (it's in your private client/trial area on nusofthq.com).
+0. Download the plugin archive (avchat-3.1.4.0.zip) from this page.
+1. Upload the *avchat-3* folder (from the avchat-3.1.4.0.zip archive) to your */wp-content/plugins* folder.
+2. Download the AVChat archive (AVChat 3.0 Build XXXX.zip) from the link sent by avchat.net.
+3. Extract the archive and upload the contents of the *Files to upload to your web site* to your new */wp-content/plugins/avchat-3/* folder.
+4. Go to the WordPress admin area - > Plugins page and activate the *AVChat Video Chat Plugin for WordPress* plugin.
+5. Go to the WordPress admin area -> Settings -> AVChat 3 and  set the *Connection string* to: *rtmp://myFMSserver.com/avchat30/_definst_* where myFMSserver.com is the domain name or ip of the dedicated/VPS server where your media server is installed.
+6. Set up the *avchat30* app on your media server. Details at http://avchat.net/support/documentation/wordpress#111 .
+7. Create a new page on your WordPress website with this content: *[chat]*.
+8. Go to that page and enter the video chat. You will be asked for the license key (it's in your private client/trial area on nusofthq.com).
 
-Get ***FREE*** installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat Plugin for WordPress'>PRO version </a> of the plugin, plus much more features that you can customize to make the chat the way you want it.
-
+Get *FREE* installation with the <a href='http://avchat.net/integrations/wordpress' title='AVChat Plugin for WordPress'>PRO version </a> of the plugin, plus much more features that you can customize to make the chat the way you want it.
 
 For further information, see <a href='http://avchat.net/support/documentation/wordpress' title='AVChat Plugin for WordPress Documentation'>our detailed WP documentation</a>.
 
@@ -66,16 +65,25 @@ For further information, see <a href='http://avchat.net/support/documentation/wo
 
 = What do I need to use this plugin ? =
 
-A WordPress web site and AVChat 3 from http://avchat.net/.
+A WordPress web site, AVChat 3 from http://avchat.net/ and a media server.
 
-= Do I get support ? =
+= Why do I need a media server ? =
 
-Yes, of course. If you've noticed a bug or a problem with the plugin, please report it to support@nusofthq.com. 
+AVChat - and all video chat web apps - uses a media server to send real time audio video and text between users.
 
-Please take into consideration that ***PRO*** users receive priority support, but we will take into account all the emails. 
+= What media servers does AVChat support ? =
 
-You can also ask for help and post your issues on our forum at http://avchat.net/forum. 
+Red5, AMS Pro and Wowza. For a complete list of supported versions please visit http://avchat.net/support/requirements#fms .
+Red5 is free and open source: http://code.google.com/p/red5/
+Wowza: http://www.wowza.com/
+Adobe Media Server Pro: http://www.adobe.com/products/adobe-media-server-professional.html
 
+= What if I need help ? =
+
+1. Post a question in the Support area of this page: http://wordpress.org/support/plugin/avchat-3
+2. Post a question in our official support forum: http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/ (free account needed).
+
+AVChat customers also receive dedicated tech support by email.
 
 == Screenshots ==
 
@@ -95,7 +103,7 @@ You can also ask for help and post your issues on our forum at http://avchat.net
 
 == Changelog ==
 
-= 1.4.0 (10.05.2013) =
+= 1.4.0 (10.05.2013) = 
 * Updated plugin description in WP Plugins backend area
 * Added FP 11.1 requirement to match the FP requirement in the recent 2330 AVChat 3 build: http://avchathq.com/blog/avchat-build-2330-introduces-h-264-support/
 * Better detection for missing JavaScript and Flash Player version
@@ -119,7 +127,7 @@ You can also ask for help and post your issues on our forum at http://avchat.net
 = 1.3.1 (21.02.2013) =
 
 = 1.3 (17.12.2012) =
-* ***NEW!***     HTML5 mobile version, now available for iOS and Android. Automatic recognition of mobile version.
+* *NEW!*     HTML5 mobile version, now available for iOS and Android. Automatic recognition of mobile version.
 * Added support for Administrators user role.
 * Don't miss new messages. Now you will see if you have notifications in the browser tab, while browsing other tabs.
 * Fixed issue with chat appearing lower on the page.
