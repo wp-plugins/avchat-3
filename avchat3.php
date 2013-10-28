@@ -311,7 +311,7 @@ function avchat3_get_user_chat($content){
 			}else{
 				require_once(ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php');
 				$mobilecheck= new Mobile_Detect();
-				if ($mobilecheck->isMobile() || $mobilecheck->isMobile()){
+				if ($mobilecheck->isMobile() || $mobilecheck->isTablet()){
 					$embed = '<a href="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/m/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
 				}else{
 					if($display_mode == 'embed'){
