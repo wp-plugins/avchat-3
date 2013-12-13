@@ -1,7 +1,7 @@
 === Video Chat Plugin ===
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, Buddypress
 Requires at least: 3.0.0
-Tested up to: 3.7
+Tested up to: 3.8
 Stable tag: 1.4.1
 Version : 1.4.1
 Contributors: stefan.avchat, naicuoctavian, radu.patron
