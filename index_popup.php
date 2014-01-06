@@ -7,10 +7,10 @@
 <?php
 $movie_param = "index.swf";
 if(isset($_GET['movie_param'])){
-	$movie_param = $_GET['movie_param'];
+	$movie_param = htmlentities($_GET['movie_param'], ENT_COMPAT, 'UTF-8');
 }
 ?>
-<input type="hidden" name="FB_appId" id="FB_appId" value="<?=$_GET['FB_appId']?>" />
+<input type="hidden" name="FB_appId" id="FB_appId" value="<?=htmlentities($_GET['FB_appId'], ENT_COMPAT, 'UTF-8');?>" />
 <script type="text/javascript" src="tinycon.min.js"></script>
 <script type="text/javascript" src="facebook_integration.js"></script>
 <script type="text/javascript" src="swfobject.js"></script>
