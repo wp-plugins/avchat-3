@@ -2,8 +2,8 @@
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, Buddypress
 Requires at least: 3.0.0
 Tested up to: 3.8
-Stable tag: 1.4.1
-Version : 1.4.1
+Stable tag: 1.4.2
+Version : 1.4.2
 Contributors: stefan.avchat, naicuoctavian, radu.patron
 License: GPLv2 or later
 
@@ -102,6 +102,9 @@ AVChat customers also receive dedicated tech support by email.
 7. PRO vs Standard
 
 == Changelog ==
+
+= 1.4.2 (06.01.2013) =
+* Fixed security issue
 
 = 1.4.1 (28.10.2013) = 
 * Fixed issue with tablets not receiving the mobile version *
