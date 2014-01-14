@@ -17,7 +17,7 @@ The AVChat Video Chat Plugin for WordPress is designed to increase members engag
 
 The Video Chat Plugin for WordPress handles the integration between AVChat and your WordPress website.
 
-<a href='http://avchat.net/features' title='AVChat software'>AVChat</a> is an highly appreciated video chat script that can be hosted by you and installed on your website. You can find out <a href='http://avchat.net/features' title='AVChat software'>more about it</a> and purchase it from <a href='http://avchat.net/buy-now' title='Buy AVChat'>here</a>.
+<a href='http://avchat.net' onclick="window.open(this.href);return false;" title='AVChat software'>AVChat</a> is an highly appreciated video chat script that can be hosted by you and installed on your website. You can find out <a href='http://avchat.net' onclick="window.open(this.href);return false;" title='AVChat software'>more about it</a> and purchase it from <a href='http://avchat.net/buy-now' title='Buy AVChat' onclick="window.open(this.href);return false;">here</a>.
 
 If you have AVChat then this Standard version of the plugin will take care of :
 
@@ -27,7 +27,7 @@ If you have AVChat then this Standard version of the plugin will take care of :
 * visitors are able to login with Facebook
 * compatible with SEO friendly URL's in WordPress
 
-The above features are for the Standard version which you can use to see the potential of the video chat solution on your site. You can download it for Free from this page.
+The above features are for the Standard version which you can use to see the potential of the video chat solution on your site. You can download it for free from this page.
 
 > #### Get your  <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>PRO version </a>  now !!! .  
 > Offering more advanced features, multisite support, additional settings and permissions, free installation and 3 months of support and updates, the <a href='http://avchat.net/integrations/wordpress' title='AVChat Video Chat plugin for WordPress'>AVChat Video Chat plugin PRO</a> is the ultimate sollution for a perfect WordPress video chat. 
