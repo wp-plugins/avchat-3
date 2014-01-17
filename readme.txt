@@ -103,7 +103,7 @@ AVChat customers also receive dedicated tech support by email.
 
 == Changelog ==
 
-= 1.4.2 (06.01.2013) =
+= 1.4.2 (14.01.2014) =
 * Fixed security issue
 
 = 1.4.1 (28.10.2013) = 
