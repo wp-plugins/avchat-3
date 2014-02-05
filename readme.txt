@@ -37,7 +37,7 @@ This plugin will easily take care of :
 
 Other features include :
 
-* simple install: it install as any other WP plugin
+* simple install: it installs as any other WP plugin
 * compatible with SEO friendly URL's in WordPress
 * customizable design: the chat looks and feel can be changed to fit with your existing WordPress theme
 
