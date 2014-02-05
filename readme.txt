@@ -7,41 +7,38 @@ Version : 1.4.2
 Contributors: stefan.avchat, naicuoctavian, radu.patron
 License: GPLv2 or later
 
-The AVChat Video Chat Plugin for WordPress is designed to increase members engagement and web site revenues with a stunning video chat solution.
+The AVChat Video Chat Plugin Standard for WordPress is designed to increase members engagement and web site revenues by integrating your website with AVChat - a powerful video chat solution.
 
 == Description ==
 
 The AVChat Video Chat Plugin Standard handles the basic integration between AVChat and your WordPress website.
 
-★★★★ 2000+ clients already use AVChat on their WordPress website
-
+★★★★ 2000+ clients already use AVChat on their WordPress websites
 ★★★★ 5 STAR RATING on wordpress.org, check out the reviews below:
-
 ★ "What a great experience, from discovering a plugin that did exactly what I needed, to a team that goes way above and beyond helping me get set up" mindbodyseries
-
 ★ "Wow, I'd like to give a five-star to AVChat" icndream
-
 ★ "The service is second to none" pssawhney
 
 Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plugin-reviews/avchat-3">http://wordpress.org/support/view/plugin-reviews/avchat-3</a>
 
 <a href='http://avchat.net' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat video chat software'>AVChat is a highly flexible video chat software</a> that can be installed on your website. It supports, rooms, moderators, private messages, public and private video chat, etc. . For a complete list of features check out the <a href='http://avchat.net/features' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat'>AVChat features page</a>. For pricing check out the <a href='http://avchat.net/buy-now' title='Buy AVChat' onclick="window.open(this.href,"_blank");return false;" target="_blank">AVChat pricing page</a>.
 
-This plugin will take care of :
-
+This plugin will easily take care of :
 * username integration (users logged in the WordPress web site will not have to login again in the video chat )
-* ability to configure permissions/limits/features for each user role from your WordPress admin area
+* permissions & features for each user role (you can change them from your WordPress admin area)
 * BuddyPress compatibility: BuddyPress avatars are automatically recognized and added to users profiles in the video chat (user profiles can be accessed directly from AVChat also)
-* visitors are able to login with their Facebook account
-* compatible with SEO friendly URL's in WordPress
-* simple install: it install as any other WP plugin.
-* customizable design: the chat looks and feel can be changed to better fit with your existing WordPress theme
+* enter chat with Facebook account for visitors
 * iPhone/iPad/Android detection: the plugin will detect if the member is on a mobile device and deliver the mobile version of AVChat
+
+Other features include:
+* simple install: it install as any other WP plugin.
+* compatible with SEO friendly URL's in WordPress
+* customizable design: the chat looks and feel can be changed to fit with your existing WordPress theme
 
 The above features are part of the **Standard** edition of this plugin which you can download for free from this page.
 
 > #### The PRO version
-> With the PRO version you get more than 28 new configuration options and permissions that you can customize for each user role, multisite support, full BuddyPress integration, a free installation and 3 months of full support and updates, and of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into it's development. Find out more about the PRO version at <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>http://avchat.net/integrations/wordpress</a>.
+> With the PRO version you get more than 28 new configuration options and permissions that you can customize for each user role, *multisite support*, better BuddyPress integration, a free installation and 3 months of full support and updates, and of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into it's development. Find out more about the PRO version at <a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>http://avchat.net/integrations/wordpress</a>.
 
 
 The AVChat Video Chat Plugin Standard for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
@@ -49,17 +46,13 @@ The AVChat Video Chat Plugin Standard for WordPress is licensed under GPL v2. Se
 > #***"Our users are very happy with the chat system and we see that more and more are using it every day... outstanding email support... quick to reply and always extremely helpful...easy to setup and reliable chat system"*** -
 Mike Johnsen.  
 
-★★★ TOP 5 REASONS WHY THIS IS THE BEST EXTENSION FOR YOUR WEBSITE: ★★★
+★★★TOP 5 REASONS WHY THIS IS THE BEST PLUGIN FOR YOUR WEBSITE:★★★
 
 ① Increase members engagement
-
 ② Increase time spent on site 4X
-
 ③ Increase premium ad space (below and above the chat)
-
 ④ Increase membership revenue
-
-⑤ Hassle free video chat supported by experts
+⑤ Hassle free video chat for your members
 
 == Installation ==
 These instructions cover installing the Standard version of the plugin (available on this page on wordpress.org/plugins). The installation instructions for the PRO version are at http://avchat.net/support/documentation/wordpress together with more documentation.
