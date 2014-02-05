@@ -13,11 +13,12 @@ The AVChat Video Chat Plugin Standard for WordPress is designed to increase memb
 
 The AVChat Video Chat Plugin Standard handles the basic integration between AVChat and your WordPress website.
 
- ★★★★ 2000+ clients already use AVChat on their WordPress websites
- ★★★★ 5 STAR RATING on wordpress.org, check out the reviews below:
- ★ "What a great experience, from discovering a plugin that did exactly what I needed, to a team that goes way above and beyond helping me get set up" by *mindbodyseries*
- ★ "Wow, I'd like to give a five-star to AVChat" by *icndream*
- ★ "The service is second to none" by  *pssawhney*
+ ★★★★ 2000+ clients already use AVChat on their WordPress websites ★★★★
+ ★★★★ 5 STAR RATING on wordpress.org, check out the reviews below: ★★★★
+ 
+ * "What a great experience, from discovering a plugin that did exactly what I needed, to a team that goes way above and beyond helping me get set up" by *mindbodyseries*
+ * "Wow, I'd like to give a five-star to AVChat" by *icndream*
+ * "The service is second to none" by  *pssawhney*
 
 Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plugin-reviews/avchat-3">http://wordpress.org/support/view/plugin-reviews/avchat-3</a>
 
