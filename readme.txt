@@ -14,9 +14,13 @@ The AVChat Video Chat Plugin Standard for WordPress is designed to increase memb
 The AVChat Video Chat Plugin Standard handles the basic integration between AVChat and your WordPress website.
 
 ★★★★ 2000+ clients already use AVChat on their WordPress websites
+
 ★★★★ 5 STAR RATING on wordpress.org, check out the reviews below:
+
 ★ "What a great experience, from discovering a plugin that did exactly what I needed, to a team that goes way above and beyond helping me get set up" mindbodyseries
+
 ★ "Wow, I'd like to give a five-star to AVChat" icndream
+
 ★ "The service is second to none" pssawhney
 
 Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plugin-reviews/avchat-3">http://wordpress.org/support/view/plugin-reviews/avchat-3</a>
@@ -24,14 +28,16 @@ Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plu
 <a href='http://avchat.net' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat video chat software'>AVChat is a highly flexible video chat software</a> that can be installed on your website. It supports, rooms, moderators, private messages, public and private video chat, etc. . For a complete list of features check out the <a href='http://avchat.net/features' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat'>AVChat features page</a>. For pricing check out the <a href='http://avchat.net/buy-now' title='Buy AVChat' onclick="window.open(this.href,"_blank");return false;" target="_blank">AVChat pricing page</a>.
 
 This plugin will easily take care of :
+
 * username integration (users logged in the WordPress web site will not have to login again in the video chat )
 * permissions & features for each user role (you can change them from your WordPress admin area)
 * BuddyPress compatibility: BuddyPress avatars are automatically recognized and added to users profiles in the video chat (user profiles can be accessed directly from AVChat also)
 * enter chat with Facebook account for visitors
 * iPhone/iPad/Android detection: the plugin will detect if the member is on a mobile device and deliver the mobile version of AVChat
 
-Other features include:
-* simple install: it install as any other WP plugin.
+Other features include :
+
+* simple install: it install as any other WP plugin
 * compatible with SEO friendly URL's in WordPress
 * customizable design: the chat looks and feel can be changed to fit with your existing WordPress theme
 
@@ -49,9 +55,13 @@ Mike Johnsen.
 ★★★TOP 5 REASONS WHY THIS IS THE BEST PLUGIN FOR YOUR WEBSITE:★★★
 
 ① Increase members engagement
+
 ② Increase time spent on site 4X
+
 ③ Increase premium ad space (below and above the chat)
+
 ④ Increase membership revenue
+
 ⑤ Hassle free video chat for your members
 
 == Installation ==
