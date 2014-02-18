@@ -66,7 +66,7 @@ Mike Johnsen.
 == Installation ==
 These instructions cover installing the Standard version of the plugin (available on this page on wordpress.org/plugins). The installation instructions for the PRO version are at http://avchat.net/support/documentation/wordpress together with more documentation.
 
-For this plugin to work, **you first need to purchase (or get a 15 days trial) the AVChat 3 Video Chat software ** from <a href='http://avchat.net' title='Purchase AVChat Video Chat Software'>here</a>. This plugin only takes care of the integration between WordPress and the AVChat 3 software. It does not contain the actual AVChat 3 software.
+For this plugin to work, **you first need to purchase (or get a 15 days trial) the AVChat 3 Video Chat software** from <a href='http://avchat.net' title='Purchase AVChat Video Chat Software'>here</a>. This plugin only takes care of the integration between WordPress and the AVChat 3 software. It does not contain the actual AVChat 3 software.
 
 Once you purchase or get a trial of AVChat 3 from the http://avchat.net website, follow these steps :
 
