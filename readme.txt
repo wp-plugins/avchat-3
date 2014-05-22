@@ -25,7 +25,7 @@ Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plu
 
 <a href='http://avchat.net' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat video chat software'>AVChat is a highly flexible video chat software</a> that can be installed on your website. It supports, rooms, moderators, private messages, public and private video chat, etc. . For a complete list of features check out the <a href='http://avchat.net/features' target="_blank" title='AVChat'>AVChat features page</a>. For pricing check out the <a href='http://avchat.net/buy-now' title='Buy AVChat' onclick="window.open(this.href,"_blank");return false;" target="_blank">AVChat pricing page</a>.
 
-This plugin will easily take care of :
+This plugin will take care of :
 
 * username integration (users logged in the WordPress web site will not have to login again in the video chat )
 * permissions & features for each user role (you can change them from your WordPress admin area)
