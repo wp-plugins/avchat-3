@@ -34,7 +34,7 @@ var attributes = {
 	align : "middle"
 };
 var embed = "embed";
-swfobject.embedSWF("<?=$movie_param;?>", "myContent", "100%", "600", "11.1.0", "", flashvars, params, attributes);
+swfobject.embedSWF("<?=$movie_param;?>", "myContent", "100%", "600", "11.4.0", "", flashvars, params, attributes);
 </script>
 <script type="text/javascript" src="new_message.js"></script>
 <div id="myContent">

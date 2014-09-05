@@ -203,7 +203,7 @@ along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 				foreach ($user_roles as $user_role => $name){
 					$user_settings = $wpdb->get_results( "SELECT free_video_time, drop_in_room, max_streams, max_rooms, username_prefix FROM ".$wpdb->prefix . "avchat3_permissions WHERE user_role = '".$user_role."'" );
 			?>
-				<td style="padding:0 10px !important"><input type="text" 
+				<td style="padding:0 10px !important"><input size="3" type="text" 
 					<?php 
 						if($key == "free_video_time" || 
 							$key == "drop_in_room" || 

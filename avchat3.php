@@ -4,20 +4,20 @@ if(session_id() == ""){
 	}
 /**
  * @package AVChat Video Chat Plugin for WordPress
- * @author  AVChat Software
- * @version 1.4.2
+ * @author  avchat.net
+ * @version 1.4.3
  */
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/avchat-3/
-Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating keep in mind that the AVChat 3 files will be removed.
-Author: AVChat Software
+Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating, keep in mind that the AVChat 3 client side files will be removed from your website and you need to upload them again to wp-content/plugins/avchat-3.
+Author: avchat.net
 Version: 1.4.2
 Author URI: http://avchat.net/
 
 
 
-Copyright (C) 2009-2013 AVChat Software, avchat.net
+Copyright (C) 2009-2014 NuSoft, http://nusofthq.com
 
 This WordPress Plugin is distributed under the terms of the GNU General Public License.
 You can redistribute it and/or modify it under the terms of the GNU General Public License 
@@ -113,7 +113,7 @@ function avchat3_install(){
 			}
 			$insert = "INSERT INTO " . $table_name .
 					  " (user_role, can_access_chat, can_access_admin_chat, can_publish_audio_video, can_stream_private, can_send_files_to_rooms, can_send_files_to_users, can_pm, can_create_rooms, can_watch_other_people_streams, can_join_other_rooms, show_users_online_stay, view_who_is_watching_me, can_block_other_users, can_buzz, can_stop_viewer, can_ignore_pm, typing_enabled, free_video_time, drop_in_room, max_streams, max_rooms) " .
-					  "VALUES ('" . $key . "','$canAccessAdmin','0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
+					  "VALUES ('$key','1','$canAccessAdmin', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '3600', '', '4', '4')";
 			 $results = $wpdb->query( $insert );
 		}
 		
@@ -303,11 +303,11 @@ function avchat3_get_user_chat($content){
 		
 		$role = $_SESSION['user_role'];
 		if($_SESSION['can_access_chat'] != '1'){
-				$embed = '<div id="av_message" style="color:#ff0000"> You do not have sufficient privileges to access this page. <a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="wp-login.php" >Click to upgrade!</a></div>';	
+				$embed = '<div id="av_message" style="color:#ff0000">'.ucfirst($role).'s can not acess the chat. <a style="display:block;padding:5px 3px;width:200px;margin:5px 0;text-align:center;background:#f3f3f3;border:1px solid #ccc" href="wp-login.php" >Click to upgrade!</a></div>';	
 		}else{
 			if(!file_exists('./wp-content/plugins/avchat-3/swfobject.js')){
 				//the AVChat 3 files have not been copied to the installation folder
-				$embed = '<p>Before the chat can work, you need to copy the <b>AVChat 3</b> files to the <b>/wp-content/plugins/avchat-3/</b> folder.</p><p>To get <b>AVChat 3</b> you can request a 15 day trial from <a href="http://avchat.net">http://avchat.net</a> or you can purchase it from <a href="http://avchat.net/buy-now">http://avchat.net/buy-now</a>.</p>';
+				$embed = '<p>Before the chat can work, you need to copy the <b>AVChat 3</b> files to the <b>/wp-content/plugins/avchat-3/</b> folder.</p><p>You can purchase <b>AVChat 3</b> from <a href="http://avchat.net/buy-now">http://avchat.net/buy-now</a>.</p>';
 			}else{
 				require_once(ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php');
 				$mobilecheck= new Mobile_Detect();
@@ -346,7 +346,7 @@ function avchat3_get_user_chat($content){
 							};
 						</script>
 						<script type="text/javascript">
-						swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "11.1.0", "", flashvars, params, attributes);
+						swfobject.embedSWF("'.get_bloginfo('url').'/wp-content/plugins/avchat-3/'.$movie_param.'", "myContent", "100%", "600", "11.4.0", "", flashvars, params, attributes);
 						</script>';
 						$embed = $embed.'<script type="text/javascript" src="'.get_bloginfo('url').'/wp-content/plugins/avchat-3/find_player.js"></script>';
 					}else{
