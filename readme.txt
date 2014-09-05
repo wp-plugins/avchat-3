@@ -127,13 +127,13 @@ AVChat customers also receive dedicated tech support by email.
 == Changelog ==
 
 = 1.4.3 (05.09.2014) =
-Fixed issue with only admins getting access to the chat by default (and only to the user interface) when 1st installing the plugin. Now all user roles have access by default to the chat user interface and the admin to the chat admin interface.
-Changed wording from "You do not have sufficient privileges to access this page" to a softer "USER_ROLE can not access the chat"
-Upped the Flash Player requirement in the JS code to 11.4 (AVChat Build 3396 needs it)
-Updated installation instructions and description
-Updated supported WordPress version to 4.0
-Replaced "AVChat Software" mentions with "avchat.net"
-Removed all AVChat trial mentions from description since at the moment AVChat can not be obtained under a 15 days trial anymore.
+* Fixed issue with only admins getting access to the chat by default (and only to the user interface) when 1st installing the plugin. Now all user roles have access by default to the chat user interface and the admin to the chat admin interface.
+* Changed wording from "You do not have sufficient privileges to access this page" to a softer "USER_ROLE can not access the chat"
+* Upped the Flash Player requirement in the JS code to 11.4 (AVChat Build 3396 needs it)
+* Updated installation instructions and description
+* Updated supported WordPress version to 4.0
+* Replaced "AVChat Software" mentions with "avchat.net"
+* Removed all AVChat trial mentions from description since at the moment AVChat can not be obtained under a 15 days trial anymore.
 
 
 = 1.4.2 (14.01.2014) =
