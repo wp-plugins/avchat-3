@@ -7,11 +7,11 @@ Version : 1.4.3
 Contributors: stefan.avchat, naicuoctavian, radu.patron
 License: GPLv2 or later
 
-The AVChat Video Chat Plugin Standard for WordPress handles the integration between WordPress and AVChat - a powerful web video chat solution. Once installed it increases members engagement and can also be setup to increase web site revenues through ads, memberships or ppv.
+The AVChat Video Chat Plugin Standard for WordPress handles the integration between WordPress and AVChat - a powerful web video chat solution. 
 
 == Description ==
 
-The AVChat Video Chat Plugin Standard handles the integration between AVChat and your WordPress website.
+The AVChat Video Chat Plugin Standard handles the integration between AVChat and your WordPress website. Once installed it increases members engagement through live audio, video, text chat in public and private chat rooms, music, emoticons, YouTube videos, file sharing, etc. and can also be setup to increase web site revenues through ads, memberships or ppv.
 
  ★★★★ 2000+ clients already use AVChat on their WordPress websites ★★★★
  
