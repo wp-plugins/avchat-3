@@ -119,7 +119,7 @@ function avchat3_install(){
 		
 		$insert = "INSERT INTO " . $table2_name .
 					  " (connection_string, invite_link, disconnect_link, login_page_url, register_page_url, text_char_limit, history_lenght, hide_left_side, p2t_default, flip_tab_menu, display_mode, allow_facebook_login, FB_appId) " .
-					  "VALUES ('rtmp://','','/','/', '/', '200', '20', 'no', 'yes', 'top', 'embed', 'yes', '')";
+					  "VALUES ('rtmp://','/','/','/', '/', '200', '20', 'no', 'yes', 'top', 'embed', 'yes', '')";
 		$results = $wpdb->query( $insert );
 	}	
 }
