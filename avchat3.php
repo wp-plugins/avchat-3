@@ -12,7 +12,7 @@ Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/avchat-3/
 Description: This plugin integrates <a href="http://avchat.net/" target="_blank">AVChat 3</a> into any WordPress website. When updating, keep in mind that the AVChat 3 client side files will be removed from your website and you need to upload them again to wp-content/plugins/avchat-3.
 Author: avchat.net
-Version: 1.4.2
+Version: 1.4.3
 Author URI: http://avchat.net/
 
 
