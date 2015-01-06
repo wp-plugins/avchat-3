@@ -71,7 +71,7 @@ These instructions cover the Standard version of the plugin. The installation in
 If you prefer to install it manually, download the plugin archive from above and upload its contents to your `/wp-content/plugins` directory.  
 2. **Activate it** as you would do with any other plugin.
 
-At this point, your Video Chat Plugin Standard installation is complete, but we still have to add the AVChat software and connect everything to a media server.  
+The plugin is now installed and activated but we still have to add the actual AVChat video chat software, connect it to a media server and place it in pages and blog posts before the chat will show up on your website. 
   
 = Part 2: Installing AVChat 3.5 Software (the actual video chat software) =  
 You will need the AVChat software and a license key (trial or purchased). You can purchase AVChat from <a href='http://avchat.net/buy-now'>avchat.net/buy-now</a> but you can also get a <a href='http://avchat.net/15daystrial/'>15 days free trial</a>. After the order is made or a trial requested, you will receive an email with a link to your private client area from where you can download the AVChat software.  
