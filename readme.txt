@@ -80,7 +80,11 @@ You will need the AVChat software and a license key (trial or purchased). You ca
 2. **Unzip and upload** the contents of `Files to upload to your web site` to your new `/wp-content/plugins/avchat-3` folder. Don’t worry, no folder or file will be overwritten!  
   
 = Part 3: Setting up the Media Server (Red5) =  
-AVChat uses a media server to send audio, video and text between users. AVChat supports the top three media servers: Red5 (free and open source, version 0.8 and 1.0RC1), Wowza (commercial, $55/month, free trial) and AMS from Adobe (commercial, $4500, free trial).  
+AVChat uses a media server to send audio, video and text between users. AVChat supports the top three media servers: Red5 (free and open source, version 0.8 and 1.0RC1), Wowza (commercial, $55/month, free trial) and AMS from Adobe (commercial, $4500, free trial).
+
+To install any media server you need a cloud/VPS server with root ssh access. At DigitalOcean.com, VPS servers start at $5/month, use <a href='https://www.digitalocean.com/?refcode=cd50d47eef55'>this link</a> to get a $10 credit. 
+
+**Installing Red5 0.8 on your own VPS:**
 
 1. <a href='http://www.red5.org/downloads/red5/0_8/' onclick='window.open(this.href,'_blank');return false;' target='_blank'>Download Red5 0.8 for your platform</a>  
 2. If your cloud/VPS server runs Linux, unzip the Red5 archive and upload its contents to `/opt/red5`. If it runs Windows, install using the `.exe` file. 
@@ -91,11 +95,12 @@ AVChat will use a **connection string** to know the media server it needs to con
   
 = Part 4: Finalizing installation =  
 Go to **Settings** -> **AVChat 3 Video Chat** in your WordPress backend.  
-1. You need to fill in the **Connection string** field with the connection string obtained in **Part 3**.  
+
+1. You need to fill in the **Connection string** field with the connection string from **Part 3**.  
 2. Now, to place the chat on your website, add the **[chat]** short code anywhere in your WordPress **pages** or **posts**. Visiting these pages or posts will bring up the AVChat 3 Video Chat.  
 3.  The first time you’ll login, you’ll be asked for a license key. You can find it in the **private client area** mentioned in **Part 2**.  
   
-That’s it! If you need any help, we’re there for you. <a href='http://nusofthq.com/forum/index.php?/forum/10-avchat-3-integrations-joomla-social-engine-wordpress-drupal-phpfox-etc/'>Forums</a> | <a href='https://wordpress.org/support/plugin/avchat-3'>Wordpress.org</a>
+That’s it! If you need any help, we’re there for you. <a href='https://wordpress.org/support/plugin/avchat-3'>Ask us on Wordpress.org</a> or <a href='http://nusofthq.com/forum/index.php?/forum/10-avchat-3-integrations-joomla-social-engine-wordpress-drupal-phpfox-etc/'>post in our forum</a>.
   
 
 == Frequently Asked Questions ==
