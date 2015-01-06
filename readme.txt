@@ -1,5 +1,5 @@
 === Video Chat Plugin ===
-Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, Buddypress
+Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, buddypress, group chat
 Requires at least: 3.0.0
 Tested up to: 4.1
 Stable tag: 1.4.3
@@ -7,11 +7,11 @@ Version : 1.4.3
 Contributors: stefan.avchat, naicuoctavian, radu.patron, lucian.alexandru
 License: GPLv2 or later
 
-The AVChat Video Chat Plugin Standard for WordPress handles the integration between WordPress and AVChat - a powerful web video chat solution. 
+The Video Chat Plugin Standard for WordPress handles the integration between WordPress and AVChat - a powerful web video chat solution. 
 
 == Description ==
 
-The AVChat Video Chat Plugin Standard handles the integration between AVChat and your WordPress website. Once installed it increases members engagement through live audio, video, text chat in public and private chat rooms, music, emoticons, YouTube videos, file sharing, etc. and can also be setup to increase web site revenues through ads, memberships or ppv.
+The Video Chat Plugin Standard handles the integration between AVChat and your WordPress website. Once installed it increases members engagement through live audio, video, text chat in public and private chat rooms, music, emoticons, YouTube videos, file sharing, etc. and can also be setup to increase web site revenues through ads, memberships or ppv.
 
  ★★★★ 2000+ clients already use AVChat on their WordPress websites ★★★★
  
@@ -46,7 +46,7 @@ The above features are part of the **Standard** edition of this plugin which you
 > **<a href='http://avchat.net/integrations/wordpress' title='AVChat plugin for WordPress'>Find out more about the PRO version at http://avchat.net/integrations/wordpress</a>**.
 
 
-The AVChat Video Chat Plugin Standard for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
+The Video Chat Plugin Standard for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
 > #***"Our users are very happy with the chat system and we see that more and more are using it every day... outstanding email support... quick to reply and always extremely helpful...easy to setup and reliable chat system"*** -
 Mike Johnsen.  
@@ -66,7 +66,7 @@ Mike Johnsen.
 == Installation ==
 These instructions cover the Standard version of the plugin. The installation instructions for the <a href='http://avchat.net/integrations/wordpress'>PRO version</a> are at <a href='http://avchat.net/support/wordpress'>avchat.net/support/wordpress</a>.  
   
-= Part 1: Installing AVChat Video Chat Plugin Standard =  
+= Part 1: Installing the Video Chat Plugin Standard =  
 1. In your WordPress backend (admin area), go to **Plugins -> Add New** and search for **AVChat**. Click **Install**.  
 If you prefer to install it manually, download the plugin archive from above and upload its contents to your `/wp-content/plugins` directory.  
 2. **Activate it** as you would do with any other plugin.
