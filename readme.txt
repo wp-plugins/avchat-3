@@ -82,7 +82,7 @@ You will need the AVChat software and a license key (trial or purchased). You ca
 = Part 3: Setting up the Media Server (Red5) =  
 AVChat uses a media server to send audio, video and text between users. AVChat supports the top three media servers: Red5 (free and open source, version 0.8 and 1.0RC1), Wowza (commercial, $55/month, free trial) and AMS from Adobe (commercial, $4500, free trial).
 
-To install any media server you need a cloud/VPS server with root ssh access. At DigitalOcean.com, VPS servers start at $5/month, use <a href='https://www.digitalocean.com/?refcode=cd50d47eef55'>this link</a> to get a $10 credit. 
+To install any media server you need a cloud/VPS server with root ssh access. At DigitalOcean.com, VPS servers start at $5/month, use <a href='https://www.digitalocean.com/?refcode=cd50d47eef55'>this link</a> to get a $10 credit (2 months free). 
 
 **Installing Red5 0.8 on your own VPS:**
 
