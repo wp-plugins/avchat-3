@@ -71,7 +71,7 @@ These instructions cover the Standard version of the plugin. The installation in
 If you prefer to install it manually, download the plugin archive from above and upload its contents to your `/wp-content/plugins` directory.  
 2. **Activate it** as you would do with any other plugin.
 
-The plugin is now installed and activated but we still have to add the actual AVChat video chat software, connect it to a media server and place it in pages and blog posts before the chat will show up on your website. 
+The plugin is now installed and activated but before the chat will show up on your website we still have to add the actual AVChat video chat software, connect it to a media server and place it in pages and blog posts. Let’s do it following the steps below!
   
 = Part 2: Installing AVChat 3.5 Software (the actual video chat software) =  
 You will need the AVChat software and a license key (trial or purchased). You can purchase AVChat from <a href='http://avchat.net/buy-now'>avchat.net/buy-now</a> but you can also get a <a href='http://avchat.net/15daystrial/'>15 days free trial</a>. After the order is made or a trial requested, you will receive an email with a link to your private client area from where you can download the AVChat software.  
@@ -94,10 +94,11 @@ To install any media server you need a cloud/VPS server with root ssh access. At
 AVChat will use a **connection string** to know the media server it needs to connect to. Yours will be **rtmp://my-media-server.com/avchat30/_definst_** where **my-media-server.com** is the server’s domain name or IP address. 
   
 = Part 4: Finalizing installation =  
-Go to **Settings** -> **AVChat 3 Video Chat** in your WordPress backend.  
 
-1. You need to fill in the **Connection string** field with the connection string from **Part 3**.  
-2. Now, to place the chat on your website, add the **[chat]** short code anywhere in your WordPress **pages** or **posts**. Visiting these pages or posts will bring up the AVChat 3 Video Chat.  
+  
+1. Go to **Settings** -> **AVChat 3 Video Chat** in your WordPress backend.
+1. In the **Connection string** field insert the connection string from **Part 3** and click [Update Options] at the bottom.  
+2. Now, to place the chat on your website, add the **[chat]** short code anywhere in your WordPress **pages** or **posts**. Visiting these pages or posts will now bring up the AVChat 3 Video Chat.  
 3.  The first time you’ll login, you’ll be asked for a license key. You can find it in the **private client area** mentioned in **Part 2**.  
   
 That’s it! If you need any help, we’re there for you. <a href='https://wordpress.org/support/plugin/avchat-3'>Ask us on Wordpress.org</a> or <a href='http://nusofthq.com/forum/index.php?/forum/10-avchat-3-integrations-joomla-social-engine-wordpress-drupal-phpfox-etc/'>post in our forum</a>.
