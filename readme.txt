@@ -91,7 +91,7 @@ To install any media server you need a cloud/VPS server with root ssh access. At
 3. The AVChat archive downloaded in **Part 2** contains a `Files to upload to your media server (Red5)` folder. You’ll need to upload the `avchat30` folder inside it to `red5/webapps`. Your final folder tree should look like this: `red5/webapps/avchat30`.  
 4. Start Red5 by running `./start.sh` on Linux terminal/shell or run `start.bat` on Windows. You will find these files in the main `red5` folder.  
 
-AVChat will use a **connection string** to know the media server it needs to connect to. Yours will be **rtmp://my-media-server.com/avchat30/_definst_** where **my-media-server.com** is the server’s domain name or IP address. 
+AVChat will use a **connection string** to know the media server it needs to connect to. Yours will be **rtmp://my-media-server.com/avchat30/\_definst\_** where **my-media-server.com** is the server’s domain name or IP address. 
   
 = Part 4: Finalizing installation =  
 
