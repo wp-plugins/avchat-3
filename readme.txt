@@ -2,8 +2,8 @@
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, buddypress, group chat
 Requires at least: 3.0.0
 Tested up to: 4.1
-Stable tag: 1.4.3
-Version : 1.4.3
+Stable tag: 2.0.0
+Version : 2.0.0
 Contributors: stefan.avchat, naicuoctavian, radu.patron, lucian.alexandru
 License: GPLv2 or later
 
@@ -147,6 +147,15 @@ AVChat customers also receive dedicated tech support by email.
 
 == Changelog ==
 
+= 2.0.0 (19.01.2015) =
+* The plugin now has it's own menu in the WP backend (previous: inside Settings)
+* Interface redesign for the plugin's backend area
+* Plugin's settings have now been reorganized in a tabbed menu
+* All options are now explained in detail, many with examples
+* Fixed small bugs and typos
+* Included a feedback form where you can send your questions or suggestions
+* You can now acess AVChat's admin area from the WP backend
+
 = 1.4.3 (05.09.2014) =
 * Fixed issue with only admins getting access to the chat by default (and only to the user interface) when 1st installing the plugin. Now all user roles have access by default to the chat user interface and the admin to the chat admin interface.
 * Changed wording from "You do not have sufficient privileges to access this page" to a softer "USER_ROLE can not access the chat"
@@ -155,7 +164,6 @@ AVChat customers also receive dedicated tech support by email.
 * Updated supported WordPress version to 4.0
 * Replaced "AVChat Software" mentions with "avchat.net"
 * Removed all AVChat trial mentions from description since at the moment AVChat can not be obtained under a 15 days trial anymore.
-
 
 = 1.4.2 (14.01.2014) =
 * Fixed security issue

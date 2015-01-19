@@ -10,7 +10,7 @@ if(isset($_GET['movie_param'])){
 	$movie_param = htmlentities($_GET['movie_param'], ENT_COMPAT, 'UTF-8');
 }
 ?>
-<input type="hidden" name="FB_appId" id="FB_appId" value="<?=htmlentities($_GET['FB_appId'], ENT_COMPAT, 'UTF-8');?>" />
+<input type="hidden" name="FB_appId" id="FB_appId" value="<?php echo htmlentities($_GET['FB_appId'], ENT_COMPAT, 'UTF-8'); ?>" />
 <script type="text/javascript" src="tinycon.min.js"></script>
 <script type="text/javascript" src="facebook_integration.js"></script>
 <script type="text/javascript" src="swfobject.js"></script>
@@ -22,6 +22,7 @@ var flashvars = {
 	userId : ""
 };
 var params = {
+	wmode : "transparent",
 	quality : "high",
 	bgcolor : "#272727",
 	play : "true",
@@ -34,7 +35,7 @@ var attributes = {
 	align : "middle"
 };
 var embed = "embed";
-swfobject.embedSWF("<?=$movie_param;?>", "myContent", "100%", "600", "11.4.0", "", flashvars, params, attributes);
+swfobject.embedSWF("<?php echo $movie_param; ?>", "myContent", "100%", "600", "11.4.0", "", flashvars, params, attributes);
 </script>
 <script type="text/javascript" src="new_message.js"></script>
 <div id="myContent">
