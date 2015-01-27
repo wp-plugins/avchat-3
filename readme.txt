@@ -131,19 +131,19 @@ AVChat customers also receive dedicated tech support by email.
 
 == Screenshots ==
 
-1. Video chat with another person
+1.
 
-2. Login Screen 
+2.
 
-3. Create a new room
+3.
 
-4. Video chat permissions 
+4.
 
-5. Video chat settings
+5.
 
-6. PRO vs Standard
+6.
 
-7. PRO vs Standard
+7.
 
 == Changelog ==
 
