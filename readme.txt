@@ -131,19 +131,19 @@ AVChat customers also receive dedicated tech support by email.
 
 == Screenshots ==
 
-1. 
-  
-2. 
-  
-5. 
-  
-6. 
-  
-7. 
-  
-8. 
-  
-9. 
+1.
+
+2.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
 
 == Changelog ==
 
