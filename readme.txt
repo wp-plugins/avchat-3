@@ -130,9 +130,16 @@ We also provide VPS servers with Red5 pre-installed and configured at http://avc
 AVChat customers also receive dedicated tech support by email.
 
 == Screenshots ==
-  
+
 1. 
-  
+2. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+
 == Changelog ==
 
 = 2.0.0 (19.01.2015) =
