@@ -131,7 +131,7 @@ AVChat customers also receive dedicated tech support by email.
 
 == Screenshots ==
 
-1.
+1.  
 
 == Changelog ==
 
