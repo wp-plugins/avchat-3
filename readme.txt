@@ -13,6 +13,8 @@ The Video Chat Plugin Standard for WordPress handles the integration between Wor
 
 The Video Chat Plugin Standard handles the integration between AVChat and your WordPress website. Once installed it increases members engagement through live audio, video, text chat in public and private chat rooms, music, emoticons, YouTube videos, file sharing, etc. and can also be setup to increase web site revenues through ads, memberships or ppv.
 
+NEW 2.0 VERSION JANUARY 2015: All new backend interface with access to the video chat, feedback form, detailed descriptions for each setting and tabbed menu for easier navigation.
+
  ★★★★ 2000+ clients already use AVChat on their WordPress websites ★★★★
  
  ★★★★ 5 STAR RATING on wordpress.org, check out the reviews below: ★★★★
@@ -30,7 +32,7 @@ This plugin will take care of :
 * username integration (users logged in the WordPress web site will not have to login again in the video chat )
 * permissions & features for each user role (you can change them from your WordPress admin area)
 * BuddyPress compatibility: BuddyPress avatars are automatically recognized and added to users profiles in the video chat (user profiles can be accessed directly from AVChat also)
-* enter chat with Facebook account for visitors
+* Facebook and Twitter integration
 * iPhone/iPad/Android detection: the plugin will detect if the member is on a mobile device and deliver the mobile version of AVChat
 
 Other features include :
