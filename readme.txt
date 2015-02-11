@@ -88,7 +88,7 @@ To install any media server you need a cloud/VPS server with root ssh access. At
 
 **Installing Red5 0.8 on your own VPS:**
 
-1. Download Red5 0.8 for your platform from <a href='https://github.com/Red5/red5-server#red5-080-final' target='_blank'>GitHUb</a> or <a href="https://mega.co.nz/#!Z11hDRZK!32U0uX7t5z6v7S6-_iHpbPmCEaRcMLjDRNqISKwbhmU" target="_blank">Mega.co.nz</a>.   
+1. Download Red5 0.8 for your platform from <a href='https://github.com/Red5/red5-server#red5-080-final' target='_blank'>GitHub</a> or <a href="https://mega.co.nz/#!Z11hDRZK!32U0uX7t5z6v7S6-_iHpbPmCEaRcMLjDRNqISKwbhmU" target="_blank">Mega.co.nz</a>.   
 2. If your cloud/VPS server runs Linux, unzip the Red5 archive and upload its contents to `/opt/red5`. If it runs Windows, install using the `.exe` file. 
 3. The AVChat archive downloaded in **Part 2** contains a `Files to upload to your media server (Red5)` folder. You’ll need to upload the `avchat30` folder inside it to `red5/webapps`. Your final folder tree should look like this: `red5/webapps/avchat30`.  
 4. Start Red5 by running `./start.sh` on Linux terminal/shell or run `start.bat` on Windows. You will find these files in the main `red5` folder.  
