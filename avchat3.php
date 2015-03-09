@@ -398,7 +398,7 @@ function avchat_mobile_offer() {
         /* Check if the user has seen the mobile offer */
 		if ($current_page == 'avchat-3/avchat3-settings.php' && !get_user_meta($user_id, 'avchat_ignore_mobileoffer')) {
 	        echo '<div class="alternate"><p>'; 
-	        echo "For a limited time you can purchase the mobile version with 17% off. Use the promo code GETMOBILE on <a href='https://secure.avangate.com/order/checkout.php?PRODS=4640703&QTY=1&CART=1' target='_blank'>this checkout link</a> | <a href='".$_SERVER['REQUEST_URI']."'&avchat_ignore_mobileoffer=0'>Hide</a>.";
+	        echo "For a limited time you can purchase the mobile version with 17% off. Use the promo code GETMOBILE on <a href='https://secure.avangate.com/order/checkout.php?PRODS=4640703&QTY=1&CART=1' target='_blank'>this checkout link</a> | <a href='{$_SERVER['REQUEST_URI']}&avchat_ignore_mobileoffer=0'>Hide</a>.";
 	        echo "</p></div>";
 	    }
     }
