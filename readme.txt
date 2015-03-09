@@ -1,9 +1,9 @@
 === Video Chat Plugin ===
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, buddypress, group chat
 Requires at least: 3.0.0
-Tested up to: 4.1
-Stable tag: 2.0.0
-Version : 2.0.0
+Tested up to: 4.1.1
+Stable tag: 2.0.1
+Version : 2.0.1
 Contributors: stefan.avchat, naicuoctavian, radu.patron, lucian.alexandru
 License: GPLv2 or later
 
@@ -86,9 +86,9 @@ AVChat uses a media server to send audio, video and text between users. AVChat s
 
 To install any media server you need a cloud/VPS server with root ssh access. At DigitalOcean.com, VPS servers start at $5/month, use <a href='https://www.digitalocean.com/?refcode=cd50d47eef55'>this link</a> to get a $10 credit (2 months free). 
 
-**Installing Red5 0.8 on your own VPS:**
+**Installing Red5 1.0.5 on your own VPS:**
 
-1. Download Red5 0.8 for your platform from <a href='https://github.com/Red5/red5-server#red5-080-final' target='_blank'>GitHub</a> or <a href="https://mega.co.nz/#!Z11hDRZK!32U0uX7t5z6v7S6-_iHpbPmCEaRcMLjDRNqISKwbhmU" target="_blank">Mega.co.nz</a>.   
+1. Download Red5 1.0.5 for your platform from <a href='https://github.com/Red5/red5-server/releases/tag/v1.0.5-RELEASE' target='_blank'>GitHub</a> or <a href="https://mega.co.nz/#!cAVGCJJR!flZqMKTB9mcD1_nvbQ_xlG88ADTEkFk7-jtuGw2uNOc" target="_blank">Mega.co.nz</a>.   
 2. If your cloud/VPS server runs Linux, unzip the Red5 archive and upload its contents to `/opt/red5`. If it runs Windows, install using the `.exe` file. 
 3. The AVChat archive downloaded in **Part 2** contains a `Files to upload to your media server (Red5)` folder. You’ll need to upload the `avchat30` folder inside it to `red5/webapps`. Your final folder tree should look like this: `red5/webapps/avchat30`.  
 4. Start Red5 by running `./start.sh` on Linux terminal/shell or run `start.bat` on Windows. You will find these files in the main `red5` folder.  
@@ -137,6 +137,11 @@ AVChat customers also receive dedicated tech support by email.
   
 == Changelog ==
 
+= 2.0.1 (09.03.2015) =
+* Corrected small typos
+* Prepared plugin for the new AVChat 3.6 release
+* Updated links and description accordingly
+
 = 2.0.0 (19.01.2015) =
 * The plugin now has it's own menu in the WP backend (previous: inside Settings)
 * Interface redesign for the plugin's backend area
@@ -144,7 +149,7 @@ AVChat customers also receive dedicated tech support by email.
 * All options are now explained in detail, many with examples
 * Fixed small bugs and typos
 * Included a feedback form where you can send your questions or suggestions
-* You can now acess AVChat's admin area from the WP backend
+* You can now access AVChat's admin area from the WP backend
 
 = 1.4.3 (05.09.2014) =
 * Fixed issue with only admins getting access to the chat by default (and only to the user interface) when 1st installing the plugin. Now all user roles have access by default to the chat user interface and the admin to the chat admin interface.

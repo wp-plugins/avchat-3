@@ -1,18 +1,15 @@
-<?php
-if (session_id() == "") {
-	session_start();
-}
+<?php if (session_id() == "") {session_start();}
 /**
  * @package AVChat Video Chat Plugin for WordPress
  * @author  avchat.net
- * @version 2.0.0
+ * @version 2.0.1
  */
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: https://wordpress.org/extend/plugins/avchat-3/
 Description: This plugin integrates <a href="http://avchat.net/?utm_source=wp-backend-plugins-page&utm_medium=wp-plugin&utm_content=wp-plugin&utm_campaign=avchat" target="_blank">AVChat 3</a> into any WordPress website. When updating, keep in mind that the AVChat 3 client side files will be removed from your website and you need to upload them again to wp-content/plugins/avchat-3.
 Author: avchat.net
-Version: 2.0.0
+Version: 2.0.1
 Author URI: http://avchat.net/
 
 
@@ -373,5 +370,45 @@ function add_new_menu() {
 	add_submenu_page('avchat-3/avchat3-settings.php', 'Provide us with Feedback', 'Feedback', 'administrator', 'avchat-3/feedback.php');
 
 }
+
+/*------------------------------------------*
+    Mobile version offer + mobile dir check
+ *-----------------------------------------*/
+/*
+ * Add a dismissable notification
+ */
+function avchat_ignore_mobileoffer() {
+    global $current_user;
+    $user_id = $current_user->ID;
+
+    /* If user clicks to ignore the notice, add that to their user meta */
+    if ($_GET['avchat_ignore_mobileoffer'] == '0') {
+         add_user_meta($user_id, 'avchat_ignore_mobileoffer', 'true', true);
+}
+} add_action('admin_init', 'avchat_ignore_mobileoffer');
+
+function avchat_mobile_offer() {
+    $current_page = $_GET['page'];
+    global $current_user;
+    $user_id = $current_user->ID;
+    
+    /* Check if the mobile folder 'ws' exists */
+    if (file_exists(plugin_dir_path(__FILE__) . 'ws') === false) {
+        
+        /* Check if the user has seen the mobile offer */
+		if ($current_page == 'avchat-3/avchat3-settings.php' && !get_user_meta($user_id, 'avchat_ignore_mobileoffer')) {
+	        echo '<div class="alternate"><p>'; 
+	        echo "For a limited time you can purchase the mobile version with 17% off. Use the promo code GETMOBILE on <a href='https://secure.avangate.com/order/checkout.php?PRODS=4640703&QTY=1&CART=1' target='_blank'>this checkout link</a> | <a href='".$_SERVER['REQUEST_URI']."'&avchat_ignore_mobileoffer=0'>Hide</a>.";
+	        echo "</p></div>";
+	    }
+    }
+
+} add_action('admin_notices', 'avchat_mobile_offer');
+// End Mobile Offer
+
+
+
+
+
 
 ?>

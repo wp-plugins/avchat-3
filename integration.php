@@ -1,4 +1,4 @@
-<?php
+<?php if (session_id() == "") {session_start();}
 /*
 Copyright (C) 2009-2015 AVChat Software, avchat.net
 
@@ -9,8 +9,6 @@ as published by the Free Software Foundation, either version 3 of the License, o
 You should have received a copy of the GNU General Public License
 along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-session_start();
 
 //-----------------------------------------
 //Config general settings
