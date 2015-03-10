@@ -2,14 +2,14 @@
 /**
  * @package AVChat Video Chat Plugin for WordPress
  * @author  avchat.net
- * @version 2.0.1
+ * @version 2.0.2
  */
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: https://wordpress.org/extend/plugins/avchat-3/
 Description: This plugin integrates <a href="http://avchat.net/?utm_source=wp-backend-plugins-page&utm_medium=wp-plugin&utm_content=wp-plugin&utm_campaign=avchat" target="_blank">AVChat 3</a> into any WordPress website. When updating, keep in mind that the AVChat 3 client side files will be removed from your website and you need to upload them again to wp-content/plugins/avchat-3.
 Author: avchat.net
-Version: 2.0.1
+Version: 2.0.2
 Author URI: http://avchat.net/
 
 
@@ -296,7 +296,7 @@ function avchat3_get_user_chat($content) {
 		require_once ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php';
 		$mobilecheck = new Mobile_Detect();
 		if ($mobilecheck->isMobile() || $mobilecheck->isTablet()) {
-			$embed = '<a href="' . get_bloginfo('url') . '/wp-content/plugins/avchat-3/m/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
+			$embed = '<a href="' . get_bloginfo('url') . '/wp-content/plugins/avchat-3/ws/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
 		} else {
 			if ($display_mode == 'embed') {
 				$embed = '

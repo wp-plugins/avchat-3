@@ -137,6 +137,9 @@ AVChat customers also receive dedicated tech support by email.
   
 == Changelog ==
 
+= 2.0.2 (10.03.2015) =
+* Small bug fix
+
 = 2.0.1 (09.03.2015) =
 * Corrected small typos
 * Prepared plugin for the new AVChat 3.6 release
