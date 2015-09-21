@@ -7,7 +7,7 @@ Version : 2.0.2
 Contributors: stefan.avchat, naicuoctavian, radu.patron, lucian.alexandru
 License: GPLv2 or later
 
-The Community Lite video chatplugin for WordPress handles the basic integration between WordPress and AVChat - a powerful video chat platform. 
+The Community Lite video chat plugin for WordPress handles the basic integration between WordPress and AVChat - a powerful video chat platform. 
 
 == Description ==
 
