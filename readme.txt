@@ -163,6 +163,7 @@ Yes we offer VPS servers with Red5 pre-installed and configured. Prices start at
 = Do you offer free support ? =
 
 Yes we offer free support through:
+
 * [the support section](http://wordpress.org/support/plugin/avchat-3) for this plugin
 * [our official support forum](http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/) (free account needed)
 
