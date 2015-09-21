@@ -108,20 +108,22 @@ AVChat will use a **connection string** to know the media server it needs to con
   
 = Part 4: Finalizing installation =  
 
-  
 1. Go to **Settings** -> **AVChat 3 Video Chat** in your WordPress backend.
 1. In the **Connection string** field insert the connection string from **Part 3** and click [Update Options] at the bottom.  
 2. Now, to place the chat on your website, add the **[chat]** short code anywhere in your WordPress **pages** or **posts**. Visiting these pages or posts will now bring up the AVChat 3 Video Chat.  
-3.  The first time you’ll login, you’ll be asked for a license key. You can find it in the **private client area** mentioned in **Part 2**.  
+3. The first time you’ll login, you’ll be asked for a license key. You can find it in the **private client area** mentioned in **Part 2**.  
   
-That’s it! If you need any help, we’re there for you. <a href='https://wordpress.org/support/plugin/avchat-3'>Ask us on Wordpress.org</a> or <a href='http://nusofthq.com/forum/index.php?/forum/10-avchat-3-integrations-joomla-social-engine-wordpress-drupal-phpfox-etc/'>post in our forum</a>.
+That’s it! If you need any help, we’re here for you. <a href='https://wordpress.org/support/plugin/avchat-3'>Ask us on Wordpress.org</a> or <a href='http://nusofthq.com/forum/index.php?/forum/10-avchat-3-integrations-joomla-social-engine-wordpress-drupal-phpfox-etc/'>post in our forum</a>.
   
-For the <a href='http://avchat.net/integrations/community-pro-video-chat-plugin'>Community PRO</a> plugin's installation instructions go to <a href='http://avchat.net/support/wordpress'>avchat.net/support/wordpress</a>. For the [Pay Per Session](http://avchat.net/integrations/pay-per-session-video-chat-plugin) plugin's installation instructions go to <a href='http://avchat.net/support/wordpress-pps'>avchat.net/support/wordpress-pps</a>. 
+For the <a href='http://avchat.net/integrations/community-pro-video-chat-plugin'>Community PRO</a> plugin's installation instructions go to <a href='http://avchat.net/support/wordpress'>avchat.net/support/wordpress</a>. 
+
+For the [Pay Per Session](http://avchat.net/integrations/pay-per-session-video-chat-plugin) plugin's installation instructions go to <a href='http://avchat.net/support/wordpress-pps'>avchat.net/support/wordpress-pps</a>. 
+
 == Frequently Asked Questions ==
 
 = What are the requirements to use this plugin ? =
 
-A WordPress web site, AVChat 3 from http://avchat.net/ and a media server.
+A WordPress web site, [AVChat 3](http://avchat.net/) and a media server.
 
 = What does AVChat do ? =
 
@@ -133,7 +135,7 @@ AVChat starts at $130 for the Lite license which will allow up to 20 simultaneou
 
 = Can I download a trial version of AVChat ? =
 
-Yes you can! Go to http://avchat.net/15daystrial/.
+Yes you can download a 15 days trial version (all features enabled, unlimited users) from http://avchat.net/15daystrial/.
 
 = Where can I see AVChat running right now ? =
 
@@ -149,9 +151,7 @@ AVChat and all video chat web apps use a media server to send real time audio vi
 Red5, Wowza and Adobe Media Server Pro. 
 
 [Red5](https://github.com/Red5/red5-server) is free and open source.
-
 [Wowza](http://www.wowza.com/) is a commercial media server priced at $65/mo.
-
 [Adobe Media Server Pro](http://www.adobe.com/products/adobe-media-server-professional.html) is a commercial media server from Adobe priced at $4500/license.
 
 For a complete list of supported versions please visit the [detailed AVChat requirements](http://avchat.net/support/requirements#fms) .
@@ -163,7 +163,6 @@ Yes we offer VPS servers with Red5 pre-installed and configured. Prices start at
 = Do you offer free support ? =
 
 Yes we offer free support through:
-
  * [the support section](http://wordpress.org/support/plugin/avchat-3) for this plugin
  * [our official support forum](http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/) (free account needed)
 
