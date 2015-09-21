@@ -131,7 +131,7 @@ AVChat handles all the video chat features, UI and functionality.
 
 = How much does AVChat cost ? =
 
-AVChat starts at $130 for the Lite license which will allow up to 20 simultaneous users. The price goes up to $799 for the Unlimited license. Full pricing info and licenses is available at http://avchat.net/buy-now.
+AVChat starts at $130 for the Lite license which will allow up to 20 simultaneous users. The price goes up to $799 for the Unlimited license. Full pricing & licenses info is available at http://avchat.net/buy-now.
 
 = Can I download a trial version of AVChat ? =
 
@@ -150,9 +150,9 @@ AVChat and all video chat web apps use a media server to send real time audio vi
 
 Red5, Wowza and Adobe Media Server Pro. 
 
-[Red5](https://github.com/Red5/red5-server) is free and open source.
-[Wowza](http://www.wowza.com/) is a commercial media server priced at $65/mo.
-[Adobe Media Server Pro](http://www.adobe.com/products/adobe-media-server-professional.html) is a commercial media server from Adobe priced at $4500/license.
+* [Red5](https://github.com/Red5/red5-server) is free and open source.
+* [Wowza](http://www.wowza.com/) is a commercial media server priced at $65/mo.
+* [Adobe Media Server Pro](http://www.adobe.com/products/adobe-media-server-professional.html) is a commercial media server from Adobe priced at $4500/license.
 
 For a complete list of supported versions please visit the [detailed AVChat requirements](http://avchat.net/support/requirements#fms) .
 
@@ -163,8 +163,8 @@ Yes we offer VPS servers with Red5 pre-installed and configured. Prices start at
 = Do you offer free support ? =
 
 Yes we offer free support through:
- * [the support section](http://wordpress.org/support/plugin/avchat-3) for this plugin
- * [our official support forum](http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/) (free account needed)
+* [the support section](http://wordpress.org/support/plugin/avchat-3) for this plugin
+* [our official support forum](http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/) (free account needed)
 
 = Do you offer paid support ? =
 Customers have access to dedicated tech support by email.
