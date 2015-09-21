@@ -36,7 +36,7 @@ Ads can be shown around the chat to increase web site revenues or you can charge
 = New 2.0 version = 
 All new backend interface with direct access to the video chat, a new feedback form, detailed descriptions for each option and tabbed backend menu for easier navigation.
 
-= Clients & Reviews =
+= Clients & reviews =
  ★★★★ 2000+ clients already use AVChat on their WordPress websites ★★★★
  
  ★★★★ 5 STAR RATING on wordpress.org, check out the reviews below: ★★★★
@@ -45,10 +45,16 @@ All new backend interface with direct access to the video chat, a new feedback f
  * "Wow, I'd like to give a five-star to AVChat" by *icndream*
  * "The service is second to none" by  *pssawhney*
 
-Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plugin-reviews/avchat-3">http://wordpress.org/support/view/plugin-reviews/avchat-3</a>
+Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plugin-reviews/avchat-3">http://wordpress.org/support/view/plugin-reviews/avchat-3</a>.
 
 = Requirements =
-This plugin requires <a href='http://avchat.net' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat video chat software'>AVChat</a> for the video chat part. AVChat is a powerful video chat platform. It supports rooms, public and private video chat, moderators, private messages and more.
+1. WordPress website or blog
+2. AVChat
+3. Media server
+
+[AVChat](http://avchat.net) is a powerful video chat platform. It supports rooms, public and private video chat, moderators, private messages and more. You can purchase AVChat or get a 15 days trial from http://avchat.net.
+
+The media server handles all the audio, video and text data sent between chat users. You can host your own Red5, Wowza or AMS server or you can use our [Red5 based media server hosting](http://avchat.net/hosting).
 
 = Here are the top 5 reasons why webmasters choose this plugin: =
 ① Increase members engagement
