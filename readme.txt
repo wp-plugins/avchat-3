@@ -119,28 +119,38 @@ That’s it! If you need any help, we’re there for you. <a href='https://wordp
 For the <a href='http://avchat.net/integrations/community-pro-video-chat-plugin'>Community PRO</a> plugin's installation instructions go to <a href='http://avchat.net/support/wordpress'>avchat.net/support/wordpress</a>. For the [Pay Per Session](http://avchat.net/integrations/pay-per-session-video-chat-plugin) plugin's installation instructions go to <a href='http://avchat.net/support/wordpress-pps'>avchat.net/support/wordpress-pps</a>. 
 == Frequently Asked Questions ==
 
-= What do I need to use this plugin ? =
+= What are the requirements to use this plugin ? =
 
 A WordPress web site, AVChat 3 from http://avchat.net/ and a media server.
 
 = Why do I need a media server ? =
 
-AVChat - and all video chat web apps - uses a media server to send real time audio video and text between users.
+AVChat and all video chat web apps use a media server to send real time audio video and text between chat users.
 
 = What media servers does AVChat support ? =
 
-Red5, AMS Pro and Wowza. For a complete list of supported versions please visit http://avchat.net/support/requirements#fms .
-Red5 is free and open source: http://code.google.com/p/red5/
-Wowza: http://www.wowza.com/
-Adobe Media Server Pro: http://www.adobe.com/products/adobe-media-server-professional.html
-We also provide VPS servers with Red5 pre-installed and configured at http://avchat.net/hosting
+Red5, Wowza and Adobe Media Server Pro. 
 
-= What if I need help ? =
+[Red5](https://github.com/Red5/red5-server) is free and open source and can be downloaded from.
 
-1. Post a question in the Support area of this page: http://wordpress.org/support/plugin/avchat-3
-2. Post a question in our official support forum: http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/ (free account needed).
+[Wowza](http://www.wowza.com/) is a commercial media server $65/mo.
 
-AVChat customers also receive dedicated tech support by email.
+[Adobe Media Server Pro](http://www.adobe.com/products/adobe-media-server-professional.html) is a commercial media server from Adobe ($4500/license).
+
+For a complete list of supported versions please visit the [detailed AVChat requirements](http://avchat.net/support/requirements#fms) .
+
+= Do you offer media server hosting ? =
+
+Yes we can provide VPS servers with Red5 pre-installed and configured. Prices start at $14.99/mo. You can check out all the plans and subscribe for one at http://avchat.net/hosting
+
+= Do you offer free support ? =
+
+Yes we offer free support through:
+1. the support section of this plugin: http://wordpress.org/support/plugin/avchat-3
+2. our official support forum: http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/ (free account needed).
+
+= Do you offer paid support ? =
+Customers have access to dedicated tech support by email.
 
 == Screenshots ==
   
