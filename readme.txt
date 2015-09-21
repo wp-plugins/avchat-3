@@ -11,13 +11,13 @@ The Video Chat Plugin Community Lite for WordPress handles the basic integration
 
 == Description ==
 
-The Video Chat Plugin Community Lite ads group video chat, rich text chat with emoticons and YouTube videos, file sharing, public and private chat rooms, music rooms and more to your WordPress website.  
+The Community Lite Video Chat plugin for WordPress adds group video chat, rich text chat with emoticons and YouTube videos, file sharing, public and private chat rooms, music rooms and more to your WordPress website.  
 
-The features can be enabled or disabled for each user group in your website using permissions. For example members can have access to video chat while visitors might not. It’s up to you to decide what each user role can do in the video chat. 
+All the features can be enabled or disabled for each user group in your website. For example members can have access to video chat while visitors might not. It’s up to you to decide what each user role can do in the video chat. 
 
-Ads can be shown around the chat to increase web site revenues or you can charge a monthly membership fee (3rd party plugin reuqired) for access to the video chat.
+Ads can be shown around the chat to increase web site revenues or you can charge a monthly membership fee (3rd party plugin required) for access to the video chat.
 
-NEW 2.0 VERSION JANUARY 2015: All new backend interface with direct access to the video chat, a new feedback form, detailed descriptions for each setting and tabbed backend menu for easier navigation.
+NEW 2.0 VERSION JANUARY 2015: All new backend interface with direct access to the video chat, a new feedback form, detailed descriptions for each option and tabbed backend menu for easier navigation.
 
  ★★★★ 2000+ clients already use AVChat on their WordPress websites ★★★★
  
@@ -29,9 +29,7 @@ NEW 2.0 VERSION JANUARY 2015: All new backend interface with direct access to th
 
 Check out all the WP reviews at <a href = "http://wordpress.org/support/view/plugin-reviews/avchat-3">http://wordpress.org/support/view/plugin-reviews/avchat-3</a>
 
-This plugin requires AVChat for the video chat part.
-
-<a href='http://avchat.net' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat video chat software'>AVChat is a highly flexible video chat platform</a> that can be installed on your website. It supports rooms, public and private video chat, moderators, private messages and more. For a complete list of features check out the <a href='http://avchat.net/features' target="_blank" title='AVChat features page’>AVChat features page</a>.
+This plugin requires AVChat for the video chat part. <a href='http://avchat.net' onclick="window.open(this.href,"_blank");return false;" target="_blank" title='AVChat video chat software'>AVChat is a highly flexible video chat platform</a>. It supports rooms, public and private video chat, moderators, private messages and more. For a complete list of features check out the <a href=“http://avchat.net/features” target="_blank" title=“AVChat features page”>AVChat features page</a>.
 
 This plugin will take care of :
 
@@ -51,11 +49,11 @@ The above features are part of the **Community Lite** edition of this plugin whi
 
 > #### The Community PRO version
 > With the Community PRO version you get more than 28 new configuration options and permissions that you can customise for each user role, **multisite support**, better BuddyPress integration, a free installation and 3 months of full support and updates, and of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into it's development. 
-> **<a href='http://avchat.net/integrations/community-pro-video-chat-plugin' title=‘Community PRO Video Chat Plugin for WordPress'>Find out more about the PRO version at http://avchat.net/integrations/community-pro-video-chat-plugin</a>**.
+> **<a href=“http://avchat.net/integrations/community-pro-video-chat-plugin” title="Community PRO Video Chat Plugin for WordPress”>Find out more about the PRO version at http://avchat.net/integrations/community-pro-video-chat-plugin</a>**.
 
 > #### The Pay Per Session version
 > With the Pay Per Session version you can deliver paid and free expert consultations & trainings online through video chat using WordPress, AVChat, PayPal and our PPS plugin.
-> **<a href='http://avchat.net/integrations/pay-per-session-video-chat-plugin' title=‘PayPer Session Plugin for WordPress'>Find out more about the PPS version at http://avchat.net/integrations/pay-per-session-video-chat-plugin</a>**.
+> **<a href='http://avchat.net/integrations/pay-per-session-video-chat-plugin' title="PayPer Session Plugin for WordPress”>Find out more about the PPS version at http://avchat.net/integrations/pay-per-session-video-chat-plugin</a>**.
 
 The Video Chat Plugin Community Lite for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
@@ -75,7 +73,7 @@ Mike Johnsen.
 ⑤ Hassle free video chat for your members
 
 
-The Community Lite, Community PRO and Pay Per Session plugins are developed by <a href='http://nusofthq.com'>NuSoft</a>
+The Community Lite, Community PRO and Pay Per Session plugins are developed by <a href=“http://nusofthq.com”>NuSoft</a>
 
 == Installation ==
 These instructions cover the Community Lite version of the plugin. The installation instructions for the <a href='http://avchat.net/integrations/community-pro-video-chat-plugin'>Community PRO</a> version are at <a href='http://avchat.net/support/wordpress'>avchat.net/support/wordpress</a> and those for the Pay Per Session version are at <a href='http://avchat.net/support/wordpress-pps'>avchat.net/support/wordpress-pps</a>.  
