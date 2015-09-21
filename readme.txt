@@ -45,7 +45,7 @@ Other features include :
 * compatible with SEO friendly URL's in WordPress
 * customisable design: the chat looks and feel can be changed to fit with your existing WordPress theme
 
-★★★Here are the top 5 reasons why webmasters choose this plugin:★★★
+★★★ Here are the top 5 reasons why webmasters choose this plugin: ★★★
 ① Increase members engagement
 ② Increase time spent on site 4X
 ③ Increase premium ad space (below and above the chat)
@@ -55,7 +55,7 @@ Other features include :
 The above features are part of the **Community Lite** plugin which you can download for free from this page.
 
 > #### The Community PRO plugin
-> With the Community PRO video chat plugin you get more than 47 configuration options and permissions that you can customise for each user role, **multisite support**, better BuddyPress integration, a free installation and 3 months of full support and updates, and of course, our gratitude for helping us sustain this plugin and for the countless late-night hours that have been poured into it's development. 
+> With the Community PRO video chat plugin you get more than 47 configuration options and permissions that you can customise for each user role, multisite support and better BuddyPress integration. 
 > Find out more about the PRO version at http://avchat.net/integrations/community-pro-video-chat-plugin.
 
 > #### The Pay Per Session plugin
