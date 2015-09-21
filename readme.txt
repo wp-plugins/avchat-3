@@ -166,6 +166,7 @@ Yes we offer free support through:
 
 * [the support section](http://wordpress.org/support/plugin/avchat-3) for this plugin
 * [our official support forum](http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/) (free account needed)
+* the plugin's feedback form available in the WordPress backend after you install the plugin
 
 = Do you offer paid support ? =
 Customers have access to dedicated tech support by email.
