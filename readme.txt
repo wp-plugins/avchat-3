@@ -123,6 +123,23 @@ For the <a href='http://avchat.net/integrations/community-pro-video-chat-plugin'
 
 A WordPress web site, AVChat 3 from http://avchat.net/ and a media server.
 
+= What does AVChat do ? =
+
+AVChat handles all the video chat features, UI and functionality.
+
+= How much does AVChat cost ? =
+
+AVChat starts at $130 for the Lite license which will allow up to 20 simultaneous users. The price goes up to $799 for the Unlimited license. Full pricing info and licenses is available at http://avchat.net/buy-now.
+
+= Can I download a trial version of AVChat ? =
+
+Yes you can! Go to http://avchat.net/15daystrial/.
+
+= Where can I see AVChat running right now ? =
+
+The AVChat website has an [online demo](http://avchat.net/demos/) you can check out.
+
+
 = Why do I need a media server ? =
 
 AVChat and all video chat web apps use a media server to send real time audio video and text between chat users.
@@ -131,23 +148,24 @@ AVChat and all video chat web apps use a media server to send real time audio vi
 
 Red5, Wowza and Adobe Media Server Pro. 
 
-[Red5](https://github.com/Red5/red5-server) is free and open source and can be downloaded from.
+[Red5](https://github.com/Red5/red5-server) is free and open source.
 
-[Wowza](http://www.wowza.com/) is a commercial media server $65/mo.
+[Wowza](http://www.wowza.com/) is a commercial media server priced at $65/mo.
 
-[Adobe Media Server Pro](http://www.adobe.com/products/adobe-media-server-professional.html) is a commercial media server from Adobe ($4500/license).
+[Adobe Media Server Pro](http://www.adobe.com/products/adobe-media-server-professional.html) is a commercial media server from Adobe priced at $4500/license.
 
 For a complete list of supported versions please visit the [detailed AVChat requirements](http://avchat.net/support/requirements#fms) .
 
 = Do you offer media server hosting ? =
 
-Yes we can provide VPS servers with Red5 pre-installed and configured. Prices start at $14.99/mo. You can check out all the plans and subscribe for one at http://avchat.net/hosting
+Yes we offer VPS servers with Red5 pre-installed and configured. Prices start at $14.99/mo. You can check out all the plans and subscribe for one at http://avchat.net/hosting.
 
 = Do you offer free support ? =
 
 Yes we offer free support through:
-1. the support section of this plugin: http://wordpress.org/support/plugin/avchat-3
-2. our official support forum: http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/ (free account needed).
+
+ * [the support section](http://wordpress.org/support/plugin/avchat-3) for this plugin
+ * [our official support forum](http://nusofthq.com/forum/index.php?/forum/3-avchat-3-httpavchatnet/) (free account needed)
 
 = Do you offer paid support ? =
 Customers have access to dedicated tech support by email.
