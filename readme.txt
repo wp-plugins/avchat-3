@@ -65,7 +65,7 @@ The media server handles all the audio, video and text data sent between chat us
 = Other plugins = 
 
 > #### The Community PRO plugin
-> With the Community PRO video chat plugin you get more than 47 configuration options and permissions that you can customise for each user role, multisite support and better BuddyPress integration. 
+> With the Community PRO video chat plugin you get more than 47 configuration options and permissions that you can customise for each user role, multisite support, Facebook & Twitter login.
 > Find out more about the PRO version at http://avchat.net/integrations/community-pro-video-chat-plugin.
 
 > #### The Pay Per Session plugin
