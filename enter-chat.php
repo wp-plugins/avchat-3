@@ -1,4 +1,6 @@
-<?php if (session_id() == "") {session_start();}
+<?php
+
+if (session_id() == "") {session_start();}
 
 /*
  * Check if the Connection string has been set

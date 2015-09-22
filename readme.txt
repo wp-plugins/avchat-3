@@ -1,10 +1,10 @@
 === Video Chat Plugin ===
 Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, buddypress, group chat, community
-Requires at least: 3.0.0
+Requires at least: 3.2
 Tested up to: 4.3.1
-Stable tag: 2.0.2
-Version : 2.0.2
-Contributors: stefan.avchat, naicuoctavian, radu.patron, lucian.alexandru
+Stable tag: 2.0.3
+Version : 2.0.3
+Contributors: naicuoctavian, lucian.alexandru
 License: GPLv2 or later
 
 The Community Lite video chat plugin for WordPress handles the basic integration between WordPress and AVChat - a powerful video chat platform. 
@@ -18,8 +18,7 @@ This plugin will take care of :
 * username & avatar integration (users logged in the WordPress web site will not have to login again in the video chat )
 * permissions & features for each user role (you can change them from your WordPress admin area)
 * BuddyPress compatibility: BuddyPress avatars are automatically recognised and added to users profiles in the video chat (user profiles can be accessed directly from AVChat also)
-* Facebook and Twitter integration
-* iPhone/iPad/Android detection: the plugin will detect if the user is on a mobile device and deliver the mobile version of AVChat
+* iPhone/iPad/Android detection: the plugin will detect if the user is on a mobile device and deliver the mobile version of AVChat (the mobile version can be purchased separately)
 
 Other features include :
 
@@ -176,6 +175,9 @@ Customers have access to dedicated tech support by email.
 1. Video Chat Plugin Community Lite for WordPress
   
 == Changelog ==
+
+= 2.0.3 (22.09.2015) =
+* Updated the plugin for WordPress 4.3.1 and above
 
 = 2.0.2 (10.03.2015) =
 * Small bug fix

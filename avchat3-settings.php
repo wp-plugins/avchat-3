@@ -1,14 +1,4 @@
 <?php
-/*
-Copyright (C) 2009-2015 AVChat Software, avchat.net
-
-This WordPress Plugin is distributed under the terms of the GNU General Public License.
-You can redistribute it and/or modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation, either version 3 of the License, or any later version.
-
-You should have received a copy of the GNU General Public License
-along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 global $wp_roles;
 global $wpdb;
@@ -206,108 +196,92 @@ EOT;
 
 } // End checking for AVChat software
 
-/*
-* Debugging and crash tests area
-*/
-//echo '<pre>';
-//print_r($_SESSION);
-//echo '</pre>';
-
 ?>
-<!DOCTYPE html>
-<html>
-<body>
-
 <script type="text/javascript">
-	(function(){var g=function(a){if(a&&a.stopPropagation)a.stopPropagation();else window.event.cancelBubble=true;var b=a?a:window.event;b.preventDefault&&b.preventDefault()},d=function(a,c,b){if(a.addEventListener)a.addEventListener(c,b,false);else a.attachEvent&&a.attachEvent("on"+c,b)},a=function(c,a){var b=new RegExp("(^| )"+a+"( |$)");return b.test(c.className)?true:false},j=function(b,c,d){if(!a(b,c))if(b.className=="")b.className=c;else if(d)b.className=c+" "+b.className;else b.className+=" "+c},h=function(a,b){var c=new RegExp("(^| )"+b+"( |$)");a.className=a.className.replace(c,"$1");a.className=a.className.replace(/ $/,"")},e=function(){var b=window.location.pathname;if(b.indexOf("/")!=-1)b=b.split("/");var a=b[b.length-1]||"root";if(a.indexOf(".")!=-1)a=a.substring(0,a.indexOf("."));if(a>20)a=a.substring(a.length-19);return a},c="mi"+e(),b=function(b,a){this.g(b,a)};b.prototype={h:function(){var b=new RegExp(c+this.a+"=(\\d+)"),a=document.cookie.match(b);return a?a[1]:this.i()},i:function(){for(var b=0,c=this.b.length;b<c;b++)if(a(this.b[b].parentNode,"selected"))return b;return 0},j:function(b,d){var c=document.getElementById(b.TargetId);if(!c)return;this.l(c);for(var a=0;a<this.b.length;a++)if(this.b[a]==b){j(b.parentNode,"selected");d&&this.d&&this.k(this.a,a)}else h(this.b[a].parentNode,"selected")},k:function(a,b){document.cookie=c+a+"="+b+"; path=/"},l:function(b){for(var a=0;a<this.c.length;a++)this.c[a].style.display=this.c[a].id==b.id?"block":"none"},m:function(){this.c=[];for(var c=this,a=0;a<this.b.length;a++){var b=document.getElementById(this.b[a].TargetId);if(b){this.c.push(b);d(this.b[a],"click",function(b){var a=this;if(a===window)a=window.event.srcElement;c.j(a,1);g(b);return false})}}},g:function(f,h){this.a=h;this.b=[];for(var e=f.getElementsByTagName("a"),i=/#([^?]+)/,a,b,c=0;c<e.length;c++){b=e[c];a=b.getAttribute("href");if(a.indexOf("#")==-1)continue;else{var d=a.match(i);if(d){a=d[1];b.TargetId=a;this.b.push(b)}else continue}}var g=f.getAttribute("data-persist")||"";this.d=g.toLowerCase()=="true"?1:0;this.m();this.n()},n:function(){var a=this.d?parseInt(this.h()):this.i();if(a>=this.b.length)a=0;this.j(this.b[a],0)}};var k=[],i=function(e){var b=false;function a(){if(b)return;b=true;setTimeout(e,4)}if(document.addEventListener)document.addEventListener("DOMContentLoaded",a,false);else if(document.attachEvent){try{var f=window.frameElement!=null}catch(g){}if(document.documentElement.doScroll&&!f){function c(){if(b)return;try{document.documentElement.doScroll("left");a()}catch(d){setTimeout(c,10)}}c()}document.attachEvent("onreadystatechange",function(){document.readyState==="complete"&&a()})}d(window,"load",a)},f=function(){for(var d=document.getElementsByTagName("ul"),c=0,e=d.length;c<e;c++)a(d[c],"tabs")&&k.push(new b(d[c],c))};i(f);return{}})();
+		(function(){var g=function(a){if(a&&a.stopPropagation)a.stopPropagation();else window.event.cancelBubble=true;var b=a?a:window.event;b.preventDefault&&b.preventDefault()},d=function(a,c,b){if(a.addEventListener)a.addEventListener(c,b,false);else a.attachEvent&&a.attachEvent("on"+c,b)},a=function(c,a){var b=new RegExp("(^| )"+a+"( |$)");return b.test(c.className)?true:false},j=function(b,c,d){if(!a(b,c))if(b.className=="")b.className=c;else if(d)b.className=c+" "+b.className;else b.className+=" "+c},h=function(a,b){var c=new RegExp("(^| )"+b+"( |$)");a.className=a.className.replace(c,"$1");a.className=a.className.replace(/ $/,"")},e=function(){var b=window.location.pathname;if(b.indexOf("/")!=-1)b=b.split("/");var a=b[b.length-1]||"root";if(a.indexOf(".")!=-1)a=a.substring(0,a.indexOf("."));if(a>20)a=a.substring(a.length-19);return a},c="mi"+e(),b=function(b,a){this.g(b,a)};b.prototype={h:function(){var b=new RegExp(c+this.a+"=(\\d+)"),a=document.cookie.match(b);return a?a[1]:this.i()},i:function(){for(var b=0,c=this.b.length;b<c;b++)if(a(this.b[b].parentNode,"selected"))return b;return 0},j:function(b,d){var c=document.getElementById(b.TargetId);if(!c)return;this.l(c);for(var a=0;a<this.b.length;a++)if(this.b[a]==b){j(b.parentNode,"selected");d&&this.d&&this.k(this.a,a)}else h(this.b[a].parentNode,"selected")},k:function(a,b){document.cookie=c+a+"="+b+"; path=/"},l:function(b){for(var a=0;a<this.c.length;a++)this.c[a].style.display=this.c[a].id==b.id?"block":"none"},m:function(){this.c=[];for(var c=this,a=0;a<this.b.length;a++){var b=document.getElementById(this.b[a].TargetId);if(b){this.c.push(b);d(this.b[a],"click",function(b){var a=this;if(a===window)a=window.event.srcElement;c.j(a,1);g(b);return false})}}},g:function(f,h){this.a=h;this.b=[];for(var e=f.getElementsByTagName("a"),i=/#([^?]+)/,a,b,c=0;c<e.length;c++){b=e[c];a=b.getAttribute("href");if(a.indexOf("#")==-1)continue;else{var d=a.match(i);if(d){a=d[1];b.TargetId=a;this.b.push(b)}else continue}}var g=f.getAttribute("data-persist")||"";this.d=g.toLowerCase()=="true"?1:0;this.m();this.n()},n:function(){var a=this.d?parseInt(this.h()):this.i();if(a>=this.b.length)a=0;this.j(this.b[a],0)}};var k=[],i=function(e){var b=false;function a(){if(b)return;b=true;setTimeout(e,4)}if(document.addEventListener)document.addEventListener("DOMContentLoaded",a,false);else if(document.attachEvent){try{var f=window.frameElement!=null}catch(g){}if(document.documentElement.doScroll&&!f){function c(){if(b)return;try{document.documentElement.doScroll("left");a()}catch(d){setTimeout(c,10)}}c()}document.attachEvent("onreadystatechange",function(){document.readyState==="complete"&&a()})}d(window,"load",a)},f=function(){for(var d=document.getElementsByTagName("ul"),c=0,e=d.length;c<e;c++)a(d[c],"tabs")&&k.push(new b(d[c],c))};i(f);return{}})();
 </script>
 <style type="text/css">
+.widefat td {
+	vertical-align: middle;
+	word-wrap: break-word;
+}
 
-	.widefat td {
-		vertical-align: middle;
-		word-wrap: break-word;
-	}
+.description {
+	color: #898989;
+	font-style: normal;
+	font-weight: normal;
+}
 
-	.description {
-		color: #898989;
-		font-style: normal;
-		font-weight: normal;
-	}
+table tr:nth-child(3n+1) {
+	background-color: #fcfcfc;
+}
 
-	table tr:nth-child(3n+1) {
-		background-color: #fcfcfc;
-	}
+ul.tabs
+{
+	padding: 14px 0 2px;
+	margin:0;
+	font-size: 0;
+	list-style-type: none;
+	text-align: left; /*set to left, center, or right to align the tabs as desired*/
+	background: #d6d6d6;
+	border:1px solid #CCC;
+	border-bottom:none;
+	border-radius: 2px 2px 0 0;
+}
 
-	ul.tabs
-	{
-		padding: 14px 0 2px;
-		margin:0;
-		font-size: 0;
-		list-style-type: none;
-		text-align: left; /*set to left, center, or right to align the tabs as desired*/
-		background: #d6d6d6;
-		border:1px solid #CCC;
-		border-bottom:none;
-		border-radius: 2px 2px 0 0;
-	}
+ul.tabs li
+{
+	display: inline;
+	margin: 0;
+	margin-right: 2px; /*distance between tabs*/
+	font: bold 12px Verdana;
+}
 
-	ul.tabs li
-	{
-		display: inline;
-		margin: 0;
-		margin-right: 2px; /*distance between tabs*/
-		font: bold 12px Verdana;
-	}
-
-	ul.tabs li a
-	{
-		text-decoration: none;
-		position: relative;
-		padding: 8px 22px;
-		color: #919191;
-		border-radius: 3px 3px 0 0;
-		outline:none;
-	}
-
-
-	ul.tabs li a:hover
-	{
-		text-decoration: none;
-		color: #000;
-	}
-
-	ul.tabs li.selected a
-	{
-		position: relative;
-		top: 0px;
-		font-weight:bold;
-		background: #FFF;
-		border: 1px solid #AAA;
-		color: #000;
-	}
+ul.tabs li a
+{
+	text-decoration: none;
+	position: relative;
+	padding: 8px 22px;
+	color: #919191;
+	border-radius: 3px 3px 0 0;
+	outline:none;
+}
 
 
-	ul.tabs li.selected a:hover, ul.tabs li.selected a:hover
-	{
-		text-decoration: none;
-	}
+ul.tabs li a:hover
+{
+	text-decoration: none;
+	color: #000;
+}
 
-	div.tabcontents
-	{
-		border: 1px solid #CCC; padding: 30px;
-		border-top-color:#AAA;
-		background-color:#FFF;
-		border-radius: 0 0 2px 2px;
-	}
+ul.tabs li.selected a
+{
+	position: relative;
+	top: 0px;
+	font-weight:bold;
+	background: #FFF;
+	border: 1px solid #AAA;
+	color: #000;
+}
 
+
+ul.tabs li.selected a:hover, ul.tabs li.selected a:hover
+{
+	text-decoration: none;
+}
+
+div.tabcontents
+{
+	border: 1px solid #CCC; padding: 30px;
+	border-top-color:#AAA;
+	background-color:#FFF;
+	border-radius: 0 0 2px 2px;
+}
 </style>
 
 <div class="wrap">
-
 	<h1>Video Chat Standard Settings</h1>
-
-<?php echo check_for_avchat_folder();?>
-
+	<?php echo check_for_avchat_folder();?>
 	<ul class="tabs" data-persist="true">
 		<li><a href="#view1">Plugin Settings</a></li>
 		<li><a href="#view2">Permissions and User Roles</a></li>
@@ -320,7 +294,7 @@ EOT;
 			<!-- SECTION: Plugin Settings -->
 			<div id="view1">
 
-				<div class="updated">
+				<div>
 					Disabled settings, along with many other options are available only in the <a href="http://avchat.net/integrations/wordpress?utm_source=wp-plugin&utm_medium=wp-backend-standard&utm_content=header-disabled-settings&utm_campaign=avchat-wp-standard" target="_blank">PRO version</a>.
 				</div>
 
@@ -463,7 +437,7 @@ EOT;
 			<!-- SECTION: User Roles & Permissions -->
 			<div id="view2">
 
-				<div class="updated">
+				<div>
 					Disabled settings, along with many other options are available only in the <a href="http://avchat.net/integrations/wordpress?utm_source=wp-plugin&utm_medium=wp-backend-standard&utm_content=header-disabled-settings&utm_campaign=avchat-wp-standard" target="_blank">PRO version</a>.
 				</div>
 
@@ -547,7 +521,7 @@ EOT;
 
 				<br />
 
-				<div class="updated">
+				<div>
 					Disabled settings, along with many other options are available only in the <a href="http://avchat.net/integrations/wordpress?utm_source=wp-plugin&utm_medium=wp-backend-standard&utm_content=header-disabled-settings&utm_campaign=avchat-wp-standard" target="_blank">PRO version</a>.
 				</div>
 
@@ -609,7 +583,7 @@ EOT;
 			<!-- SECTION: Facebook & Twitter Login -->
 			<div id="view3">
 
-				<div class="updated">
+				<div>
 					These settings are available only in <a href="http://avchat.net/integrations/wordpress?utm_source=wp-plugin&utm_medium=wp-backend-standard&utm_content=header-only-available-in-pro&utm_campaign=avchat-wp-standard" target="_blank">the PRO version</a>.
 				</div>
 
@@ -690,7 +664,7 @@ EOT;
 			<!-- Start Themes tab -->
 			<div id="view4">
 
-				<div class="updated">
+				<div>
 					Coming soon. These settings will be available in a future version.
 				</div>
 
@@ -705,5 +679,3 @@ EOT;
 
 	</form>
 </div><!-- End wrap -->
-</body>
-</html>

@@ -1,28 +1,14 @@
-<?php if (session_id() == "") {session_start();}
-/**
- * @package AVChat Video Chat Plugin for WordPress
- * @author  avchat.net
- * @version 2.0.2
- */
+<?php
 /*
 Plugin Name: AVChat Video Chat Plugin for WordPress
 Plugin URI: https://wordpress.org/extend/plugins/avchat-3/
-Description: This plugin integrates <a href="http://avchat.net/?utm_source=wp-backend-plugins-page&utm_medium=wp-plugin&utm_content=wp-plugin&utm_campaign=avchat" target="_blank">AVChat 3</a> into any WordPress website. When updating, keep in mind that the AVChat 3 client side files will be removed from your website and you need to upload them again to wp-content/plugins/avchat-3.
+Description: This plugin integrates <a href="http://avchat.net/?utm_source=wp-backend-plugins-page&utm_medium=wp-plugin&utm_content=wp-plugin&utm_campaign=avchat" target="_blank">AVChat 3</a> into any WordPress website. When updating, keep in mind that the AVChat 3 client side files will be removed from your website and you need to upload them again to <code>wp-content/plugins/avchat-3</code>
 Author: avchat.net
-Version: 2.0.2
+Version: 2.0.3
 Author URI: http://avchat.net/
+*/
 
-
-
-Copyright (C) 2009-2015 NuSoft, http://nusofthq.com
-
-This WordPress Plugin is distributed under the terms of the GNU General Public License.
-You can redistribute it and/or modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation, either version 3 of the License, or any later version.
-
-You should have received a copy of the GNU General Public License
-along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
- */
+if (session_id() == "") {session_start();}
 
 //this function is called when you press Activate
 function avchat3_install() {
@@ -293,7 +279,7 @@ function avchat3_get_user_chat($content) {
 		//the AVChat 3 files have not been copied to the installation folder
 		$embed = '<p>Before the chat can work, you need to copy the <b>AVChat 3</b> files to the <b>/wp-content/plugins/avchat-3/</b> folder.</p><p>You can purchase <b>AVChat 3</b> from <a href="http://avchat.net/buy-now?utm_source=wp-plugin-buy-page&utm_medium=free-plugin&utm_campaign=wp-plugin">http://avchat.net/buy-now</a>.</p>';
 	} else {
-		require_once ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php';
+		include ABSPATH . 'wp-content/plugins/avchat-3/Mobile_Detect.php';
 		$mobilecheck = new Mobile_Detect();
 		if ($mobilecheck->isMobile() || $mobilecheck->isTablet()) {
 			$embed = '<a href="' . get_bloginfo('url') . '/wp-content/plugins/avchat-3/ws/m.php" style="background:#f0f0f0;display:block;padding:10px 20px;width:200px;text-align:center;border:1px solid #ccc">Enter mobile version</a>';
@@ -382,13 +368,15 @@ function avchat_ignore_mobileoffer() {
     $user_id = $current_user->ID;
 
     /* If user clicks to ignore the notice, add that to their user meta */
-    if ($_GET['avchat_ignore_mobileoffer'] == '0') {
+    if (isset($_GET['avchat_ignore_mobileoffer']) && $_GET['avchat_ignore_mobileoffer'] == '0') {
          add_user_meta($user_id, 'avchat_ignore_mobileoffer', 'true', true);
+    }
 }
-} add_action('admin_init', 'avchat_ignore_mobileoffer');
+
+add_action('admin_init', 'avchat_ignore_mobileoffer');
 
 function avchat_mobile_offer() {
-    $current_page = $_GET['page'];
+    $current_page = (isset($_GET['page'])) ? $_GET['page'] : '';
     global $current_user;
     $user_id = $current_user->ID;
     
@@ -396,14 +384,22 @@ function avchat_mobile_offer() {
     if (file_exists(plugin_dir_path(__FILE__) . 'ws') === false) {
         
         /* Check if the user has seen the mobile offer */
-		if ($current_page == 'avchat-3/avchat3-settings.php' && !get_user_meta($user_id, 'avchat_ignore_mobileoffer')) {
-	        echo '<div class="alternate"><p>'; 
-	        echo "For a limited time you can purchase the mobile version with 17% off. Use the promo code GETMOBILE on <a href='https://secure.avangate.com/order/checkout.php?PRODS=4640703&QTY=1&CART=1' target='_blank'>this checkout link</a> | <a href='{$_SERVER['REQUEST_URI']}&avchat_ignore_mobileoffer=0'>Hide</a>.";
-	        echo "</p></div>";
+		if (isset($current_page) && !empty($current_page) && $current_page == 'avchat-3/avchat3-settings.php' && !get_user_meta($user_id, 'avchat_ignore_mobileoffer')) {
+	        echo "
+	        	<div class='wrap'>
+			        <div class='alternate'>
+				        <p>
+				        	Did you knew that we also have a Pay Per View / Session version? <a href='http://avchat.net/integrations/pay-per-session-video-chat-plugin' target='_blank'>Check it out</a>. | Use the promo code <a href='https://secure.avangate.com/order/checkout.php?PRODS=4640703&QTY=1&CART=1' target='_blank'>GETMOBILE</a> to get 17% off the mobile version. | <a href='{$_SERVER['REQUEST_URI']}&avchat_ignore_mobileoffer=0'><strong>Don't show this again</strong></a>
+				        </p>
+			        </div>
+		        </div>
+	        ";
 	    }
     }
 
-} add_action('admin_notices', 'avchat_mobile_offer');
+} 
+
+add_action('admin_notices', 'avchat_mobile_offer');
 // End Mobile Offer
 
 
