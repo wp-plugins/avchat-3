@@ -1,7 +1,7 @@
 === Video Chat Plugin ===
-Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, image, images, red5, fms, wowza, avchat, buddypress, group chat, community
+Tags: chat, video chat, chatroom, flash, flash video chat, flash chat, videochat, streaming, pay per session, pay per view, one on one, consultations, image, images, red5, fms, wowza, avchat, buddypress, group chat, community
 Requires at least: 3.2
-Tested up to: 4.3.1
+Tested up to: 4.4
 Stable tag: 2.0.3
 Version : 2.0.3
 Contributors: naicuoctavian, lucian.alexandru
@@ -69,10 +69,10 @@ The media server handles all the audio, video and text data sent between chat us
 > Find out more about the PRO version at http://avchat.net/integrations/community-pro-video-chat-plugin.
 
 > #### The Pay Per Session plugin
-> With the Pay Per Session video chat plugin you can deliver paid and free expert consultations & trainings online through video chat using WordPress, AVChat, PayPal and our PPS plugin.
+> With the Pay Per Session video chat plugin you can deliver pay per view and free one-on-one expert consultations & trainings online through video chat using WordPress, AVChat, PayPal and our PPS plugin.
 > Find out more about the PPS version at http://avchat.net/integrations/pay-per-session-video-chat-plugin.
 
-The Community Lite, Community PRO and Pay Per Session plugins are developed by <a href=“http://nusofthq.com”>NuSoft</a>.
+The Community Lite, Community PRO and Pay Per Session plugins are developed by [NuSoft](http://nusofthq.com).
 
 The Community Lite video chat plugin for WordPress is licensed under GPL v2. See the full text of the GPL v2 license in license.txt.
 
